@@ -1,0 +1,18 @@
+735  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 6956 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+752  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+752  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6373 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.226 seconds (JVM running for 6.962)
+15801 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+15898 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+15963 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+15972 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+16271 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+16271 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+830  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11112 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+834  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+835  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5818 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.574 seconds (JVM running for 8.119)
+10335 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+10418 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+10634 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+10634 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
