@@ -644,7 +644,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 	}
 	
 	/**
-	 * 완료된 조사업무 상세 조회(조사자용)
+	 * 완료된 조사업무 상세 조회(조사자용)-나얼낭러ㅣㄴ아러니아러
 	 * @param reportNo
 	 * @return
 	 * @throws Exception
