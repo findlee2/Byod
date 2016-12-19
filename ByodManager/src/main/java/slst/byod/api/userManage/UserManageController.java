@@ -22,9 +22,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import slst.byod.api.logManage.LogManageUtilParsingController;
-import slst.byod.api.srchManage.SrchManageVO;
 import slst.byod.api.util.UserPwAlgorithm;
-@Api(value = "ByodManager API")
+@Api(value = "Login & User manage API")
 @RestController
 @RequestMapping(value = "", produces = { "application/json" })
 public class UserManageController extends LogManageUtilParsingController{
@@ -572,7 +571,28 @@ public class UserManageController extends LogManageUtilParsingController{
 	@RequestMapping(value = "/Byod/AdminSrchUserInfoList", method = RequestMethod.GET)
 	public ResponseEntity<Object> AdminSrchUserInfoList() throws Exception {
 		
-		List<SrchManageVO> responseBody = userManageMapper.selectAdminSrchUserInfoList();
+		List<UserManageVO> responseBody = userManageMapper.selectAdminSrchUserInfoList();
+		
+		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
+	}
+	
+	/**
+	 * 조사자 정보 상세 조회(관리자용)
+	 * @param 
+	 * @return
+	 * @throws Exception
+	 */
+	@ApiOperation(value = "조사자 정보 상세 조회(관리자용)", notes = "관리자가 조사자의 정보을 상세조회 한다.", response = UserManageVO.class)
+	@ApiImplicitParams({
+	    @ApiImplicitParam(name = "userId",       value = "사용자 아이디", 	required = true,  dataType = "string", paramType = "query")
+	  })	
+	@RequestMapping(value = "/Byod/AdminSrchUserDetailInfo", method = RequestMethod.GET)
+	public ResponseEntity<Object> AdminSrchUserDetailInfo(@RequestParam("userId") String userId) throws Exception {
+		
+		UserManageVO userVO = new UserManageVO();
+		userVO.setUser_id(userId);
+		
+		UserManageVO responseBody = userManageMapper.selectAdminSrchUserDetailInfo(userVO);
 		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}

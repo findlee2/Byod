@@ -30,6 +30,13 @@
 		 ORDER BY user_reg_dt DESC, user_appve_yn DESC
    </select>
    
+   <!-- GET /Byod/AdminSrchUserDetailInfo 조사자 정보 상세 조회(관리자용) -->
+   <select id="selectAdminSrchUserDetailInfo" resultType="UserManageVO">
+		SELECT *
+		  FROM bd_user_info
+		 WHERE user_id = #{user_id}
+   </select>
+   
    <!-- POST /Byod/AdminUserRegist 조사자 등록(관리자용) -->
    <insert id="insertUserInfo" parameterType="UserManageVO">
     	INSERT INTO bd_user_info(

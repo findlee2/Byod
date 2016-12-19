@@ -3,6 +3,7 @@ package slst.byod.api.srchEqupmntManage;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,26 +17,61 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import slst.byod.api.util.Base64Utils;
 import slst.byod.api.util.ByodApiUtil;
 
-@Api(value = "ByodManager API")
+@Api(value = "SrchEqupmnt manage API")
 @RestController
 @RequestMapping(value = "", produces = { "application/json" })
 public class SrchEqupmntManageController {
 	@Autowired SrchEqupmntManageMapper srchEqupmntManageMapper;
 	
+	@Value("${Globals.RoundKey}")
+	private String RoundKey;
+	
+	Base64Utils base64 = new Base64Utils();
 	
 	/**
-	 * 조사장비조회(관리자용)
+	 * 전체 조사장비 조회(관리자용)
 	 * @return
 	 * @throws Exception
 	 */
-	@ApiOperation(value = "조사장비조회(관리자용)", notes = "관리자가 조사장비 조회를한다.", response = SrchEqupmntManageVO.class)
-	@RequestMapping(value = "/Byod/AdminSrchEqupmntInfoList", method = RequestMethod.GET)
-	public ResponseEntity<Object> AdminSrchEqupmntInfoList() throws Exception {
+	@ApiOperation(value = "전체 조사장비 조회(관리자용)", notes = "관리자가 전체 조사장비 조회를 한다.", response = SrchEqupmntManageVO.class)
+	@RequestMapping(value = "/Byod/AdminSrchEqupmntInfoAllList", method = RequestMethod.GET)
+	public ResponseEntity<Object> AdminSrchEqupmntInfoAllList() throws Exception {
 		
-		List<SrchEqupmntManageVO> responseBody = srchEqupmntManageMapper.selectAdminSrchEqupmntInfoList();
-
+		List<SrchEqupmntManageVO> responseBody = srchEqupmntManageMapper.selectAdminSrchEqupmntInfoList(null);
+		
+		for(int i=0; i<responseBody.size(); i++){
+			responseBody.get(i).setSrch_equpmnt_identi_no(base64.decrypt(responseBody.get(i).getSrch_equpmnt_identi_no(), RoundKey));
+			responseBody.get(i).setSrch_equpmnt_kind(base64.decrypt(responseBody.get(i).getSrch_equpmnt_kind(), RoundKey));
+			responseBody.get(i).setUser_nm(base64.decrypt(responseBody.get(i).getUser_nm(), RoundKey));
+		}
+		
+		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
+	}
+	
+	/**
+	 * 조사장비 조회(관리자용)
+	 * @return
+	 * @throws Exception
+	 */
+	@ApiOperation(value = "조사장비 조회(관리자용)", notes = "관리자가 조사장비를 수정 및 삭제를 하기위한 선 조회를 한다.", response = SrchEqupmntManageVO.class)
+	@ApiImplicitParams({
+		@ApiImplicitParam(name = "srchEqupmntId", value = "조사장비 고유번호",	required = true,  dataType = "string", paramType = "query")
+	  })
+	@RequestMapping(value = "/Byod/AdminSrchEqupmntInfoList", method = RequestMethod.GET)
+	public ResponseEntity<Object> AdminSrchEqupmntInfoList(@RequestParam("srchEqupmntId") String srchEqupmntId) throws Exception {
+		
+			SrchEqupmntManageVO equpmntVO = new SrchEqupmntManageVO();
+			equpmntVO.setSrch_equpmnt_id(srchEqupmntId);
+			
+			SrchEqupmntManageVO responseBody = (SrchEqupmntManageVO) srchEqupmntManageMapper.selectAdminSrchEqupmntInfoList(equpmntVO);
+		
+			responseBody.setSrch_equpmnt_identi_no(base64.decrypt(responseBody.getSrch_equpmnt_identi_no(), RoundKey));
+			responseBody.setSrch_equpmnt_kind(base64.decrypt(responseBody.getSrch_equpmnt_kind(), RoundKey));
+			responseBody.setUser_nm(base64.decrypt(responseBody.getUser_nm(), RoundKey));
+		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
 	
@@ -67,9 +103,10 @@ public class SrchEqupmntManageController {
 		equpmntId = srchEqupmntManageMapper.selectMaxEqupmntId();
 		
 		equpmntVO.setSrch_equpmnt_id(ByodApiUtil.numberParsing("3",equpmntId));
-		equpmntVO.setSrch_equpmnt_identi_no(srchEqupmntIdentiNo);
-		equpmntVO.setSrch_equpmnt_kind(srchEqupmntKind);
-		equpmntVO.setUser_nm(userNm);
+		equpmntVO.setSrch_equpmnt_identi_no(base64.encrypt(srchEqupmntIdentiNo,RoundKey));
+		equpmntVO.setSrch_equpmnt_kind(base64.encrypt(srchEqupmntKind,RoundKey));
+		equpmntVO.setUser_nm(base64.encrypt(userNm,RoundKey));
+		
 		equpmntVO.setUser_id(userId);
 		equpmntVO.setUse_yn(useYn);
 		
@@ -111,9 +148,9 @@ public class SrchEqupmntManageController {
 		SrchEqupmntManageVO equpmntVO  = new SrchEqupmntManageVO();
 		
 		equpmntVO.setSrch_equpmnt_id(srchEqupmntId);
-		equpmntVO.setSrch_equpmnt_identi_no(srchEqupmntIdentiNo);
-		equpmntVO.setSrch_equpmnt_kind(srchEqupmntKind);
-		equpmntVO.setUser_nm(userNm);
+		equpmntVO.setSrch_equpmnt_identi_no(base64.encrypt(srchEqupmntIdentiNo,RoundKey));
+		equpmntVO.setSrch_equpmnt_kind(base64.encrypt(srchEqupmntKind,RoundKey));
+		equpmntVO.setUser_nm(base64.encrypt(userNm,RoundKey));
 		equpmntVO.setUser_id(userId);
 		equpmntVO.setUse_yn(useYn);
 		
@@ -130,8 +167,8 @@ public class SrchEqupmntManageController {
 	}
 	
 	/**
-	 * 조사자 장비 삭제(관리자용)
-	 * @param userId
+	 * 조사 장비 삭제(관리자용)
+	 * @param srchEqupmntId
 	 * @return
 	 * @throws Exception
 	 */

@@ -9,16 +9,29 @@ public interface SrchManageMapper {
 	
 	/**
 	 * 조사업무리스트 조회(조사자용)
-	 * @param userId
+	 * @param srchVO
 	 * @return
 	 */
 	public List<SrchManageVO> selectSrchInfoList(SrchManageVO srchVO);
 	
 	/**
-	 * 조사업무 목록/상세 조회(관리자용)
+	 * 조사업무 상세 조회(조사자용)
+	 * @param srchVO
 	 * @return
 	 */
-	public List<SrchManageVO> selectUserSrchInfoList(SrchManageVO srchVO);
+	public SrchManageVO selectSrchDetailInfo(SrchManageVO srchVO);
+	
+	/**
+	 * 조사업무 목록 조회(관리자용)
+	 * @return
+	 */
+	public List<SrchManageVO> selectUserSrchInfoList();
+	
+	/**
+	 * 조사업무 상세 조회(관리자용)
+	 * @return
+	 */
+	public SrchManageVO selectUserSrchDetailInfo(SrchManageVO srchVO);
 	
 	/**
 	 * 조사업무 등록 전 보고서 번호 조회(관리자용)

@@ -17,7 +17,7 @@ public interface SrchEqupmntManageMapper {
 	 * 조사장비조회(관리자용)
 	 * @return
 	 */
-	public List<SrchEqupmntManageVO> selectAdminSrchEqupmntInfoList();
+	public List<SrchEqupmntManageVO> selectAdminSrchEqupmntInfoList(SrchEqupmntManageVO equpmntVO);
 	
 	/**
 	 * 조사장비 등록(관리자용)

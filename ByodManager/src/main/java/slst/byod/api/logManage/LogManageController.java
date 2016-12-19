@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiResponses;
 import slst.byod.api.srchManage.SrchManageVO;
 import slst.byod.api.util.ByodApiUtil;
 
-@Api(value = "ByodManager API")
+@Api(value = "Log manage API")
 @RestController
 @RequestMapping(value = "", produces = { "application/json" })
 public class LogManageController {

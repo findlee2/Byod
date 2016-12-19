@@ -33,7 +33,7 @@ import slst.byod.api.userManage.UserManageVO;
 import slst.byod.api.util.ByodApiUtil;
 
 @Slf4j
-@Api(value = "ByodManager API")
+@Api(value = "SearchBusiness manage API")
 @RestController
 @RequestMapping(value = "", produces = { "application/json" })
 public class SrchManageController extends LogManageUtilParsingController{
@@ -74,25 +74,63 @@ public class SrchManageController extends LogManageUtilParsingController{
 	}
 	
 	/**
-	 * 조사업무 목록/상세 조회(관리자용)
+	 * 조사자가 자신의 조사업무를 상세 조회한다.(조사자용)
+	 * @param userId
+	 * @return
+	 * @throws Exception
+	 */
+	@ApiOperation(value = "조사업무 상세 조회(조사자용)", notes = "조사자가 자신의 조사 업무를  상세조회한다.", response = SrchManageVO.class)
+	@ApiImplicitParams({
+	    @ApiImplicitParam(name = "reportNo",   value = "보고서 번호",  required = true, dataType = "string", paramType = "query")
+	  })
+	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
+	@RequestMapping(value = "/Byod/SrchDetailInfo", method = RequestMethod.GET)
+	public ResponseEntity<Object> SrchDetailInfo(@RequestParam String reportNo) throws Exception {
+
+		SrchManageVO srchVO       = new SrchManageVO();
+		SrchManageVO responseBody = null;
+		srchVO.setReport_no(reportNo);
+			
+		responseBody = srchManageMapper.selectSrchDetailInfo(srchVO);
+
+		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
+	}
+	
+	/**
+	 * 조사업무 목록 조회(관리자용)
+	 * @param 
+	 * @return
+	 * @throws Exception
+	 */
+	@ApiOperation(value = "조사업무 목록 조회(관리자용)", notes = "관리자가 조사 업무  리스트를  조회한다.", response = SrchManageVO.class)
+	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
+	@RequestMapping(value = "/Byod/AdminSrchInfoList", method = RequestMethod.GET)
+	public ResponseEntity<Object> AdminSrchInfoList() throws Exception {
+		
+		List<SrchManageVO> responseBody = srchManageMapper.selectUserSrchInfoList();
+
+		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
+	}
+	
+	/**
+	 * 조사업무 상세 조회(관리자용)
 	 * @param reportNo
 	 * @return
 	 * @throws Exception
 	 */
-	@ApiOperation(value = "조사업무 목록/상세 조회(관리자용)", notes = "관리자가 조사 업무  리스트/상세조회를 조회한다.", response = SrchManageVO.class)
+	@ApiOperation(value = "조사업무 상세 조회(관리자용)", notes = "관리자가 조사 업무  상세조회를 조회한다.", response = SrchManageVO.class)
 	@ApiImplicitParams({
-	    @ApiImplicitParam(name = "reportNo",   value = "보고서 번호",  required = false, dataType = "string", paramType = "query")
+	    @ApiImplicitParam(name = "reportNo",   value = "보고서 번호",  required = true, dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/AdminSrchInfoList", method = RequestMethod.GET)
-	public ResponseEntity<Object> AdminSrchInfoList(@RequestParam(value="reportNo", required = false) String reportNo) throws Exception {
+	@RequestMapping(value = "/Byod/AdminSrchDetailInfo", method = RequestMethod.GET)
+	public ResponseEntity<Object> AdminSrchDetailInfo(@RequestParam("reportNo") String reportNo) throws Exception {
 
 		SrchManageVO srchVO = new SrchManageVO();
 		
-		if(reportNo != null){
-			srchVO.setReport_no(reportNo);
-		}
-		List<SrchManageVO> responseBody = srchManageMapper.selectUserSrchInfoList(srchVO);
+		srchVO.setReport_no(reportNo);
+		
+		SrchManageVO responseBody = srchManageMapper.selectUserSrchDetailInfo(srchVO);
 
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
@@ -388,7 +426,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 		
 		srchManageMapper.deleteSrchInfoList(srchVO);
 		
-		reSrchVO = (SrchManageVO) srchManageMapper.selectUserSrchInfoList(srchVO);
+		reSrchVO = (SrchManageVO) srchManageMapper.selectUserSrchDetailInfo(srchVO);
 		
 		/**
 		 * [로그생성]
@@ -523,7 +561,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 			
 			if(UserVO != null){
 				
-				SrchManageVO logSrch = (SrchManageVO)srchManageMapper.selectUserSrchInfoList(responseBody);
+				SrchManageVO logSrch = (SrchManageVO)srchManageMapper.selectUserSrchDetailInfo(responseBody);
 				
 				/**
 				 * [로그생성]

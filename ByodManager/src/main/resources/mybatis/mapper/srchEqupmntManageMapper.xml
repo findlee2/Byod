@@ -8,10 +8,14 @@
    		  FROM bd_srch_equpmnt_info
    </select>
    
-   <!-- GET /Byod/AdminSrchEqupmntInfoList 조사장비조회(관리자용) -->
+   <!-- GET /Byod/AdminSrchEqupmntInfoAllList 전체 조사장비 조회(관리자용),
+		GET /Byod/AdminSrchEqupmntInfoList 조사장비 조회(관리자용)
+    -->
    <select id="selectAdminSrchEqupmntInfoList" resultType="SrchEqupmntManageVO">
 		SELECT *
 		  FROM bd_srch_equpmnt_info
+		  <if test="srch_equpmnt_id != null">WHERE srch_equpmnt_id = #{srch_equpmnt_id}
+		  </if>
 		 ORDER BY srch_equpmnt_id DESC
    </select>
    

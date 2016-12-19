@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import slst.byod.api.srchManage.SrchManageVO;
-
 @Mapper
 public interface UserManageMapper {
 
@@ -53,7 +51,13 @@ public interface UserManageMapper {
 	 * 조사자 정보 조회(관리자용)
 	 * @return
 	 */
-	public List<SrchManageVO> selectAdminSrchUserInfoList();
+	public List<UserManageVO> selectAdminSrchUserInfoList();
+	
+	/**
+	 * 조사자 정보 상세 조회(관리자용)
+	 * @return
+	 */
+	public UserManageVO selectAdminSrchUserDetailInfo(UserManageVO userVO);
 	
 	/**
 	 * 조사자 승인 및 권한 변경(관리자용)

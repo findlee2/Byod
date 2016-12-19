@@ -10,15 +10,25 @@
 		   AND report_stats  = '1' 
       ORDER BY report_no ASC, report_cre_dt DESC
    </select>
-    
+   
+   <!-- GET /Byod/SrchDetailInfo 조사업무 상세 조회(조사자용) -->
+   <select id="selectSrchDetailInfo" parameterType="SrchManageVO" resultType="SrchManageVO">
+		SELECT *
+		  FROM bd_srch_info
+		 WHERE report_no = #{report_no}
+   </select>
+   
    <!-- GET  /Byod/AdminSrchInfoList 조사업무 목록/상세 조회(관리자용) -->
    <select id="selectUserSrchInfoList" resultType="SrchManageVO">
    	 	SELECT *
 		  FROM bd_srch_info
-		  <if test="report_no != null">
-       	     WHERE report_no = #{report_no}
-       	  </if>
       ORDER BY report_stats DESC, report_no DESC, submit_dt DESC, report_cre_dt DESC		     	    
+   </select>
+   
+   <select id="selectUserSrchDetailInfo" resultType="SrchManageVO">
+   	 	SELECT *
+		  FROM bd_srch_info
+       	 WHERE report_no = #{report_no}      		     	    
    </select>
    
    <!-- GET  /Byod/AdminBeforeRegistBusiness 조사업무 등록 전 보고서 번호 조회(관리자용) -->
