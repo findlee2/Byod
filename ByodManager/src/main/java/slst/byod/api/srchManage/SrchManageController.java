@@ -566,7 +566,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 
 		AttchFileManageVO attchVO = new AttchFileManageVO();
 		String tmpResultID        = "";
-		String extensionGb = "";
+		String extensionGb        = "";
 		
 		try{
 			
