@@ -1700,3 +1700,29 @@ java.sql.SQLException: Subquery returns more than 1 row
 205104 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectMaxReportNo - ==>  Preparing: SELECT max(report_no) FROM bd_srch_info 
 205104 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectMaxReportNo - ==> Parameters: 
 205106 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectMaxReportNo - <==      Total: 1
+618  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11996 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+623  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+623  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6141 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.995 seconds (JVM running for 6.707)
+63468 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/SrchUserReportUpload
+63797 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+63818 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000001(String)
+63861 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+63862 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+63864 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+63864 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000001(String)
+63873 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+63880 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+63881 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+63882 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+63883 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+63885 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000001(String), SL_ResultReport_000001(String), ahnsu234(String), 1(String), C:/attachments/(String), dUUCzugLSg7ZI5YmXHbsrtsiybDkFKzc.mp3(String), 3. 한동근-01-그대라는 사치.mp3(String), mp3(String)
+63928 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+63929 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+63931 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+63932 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+63933 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+63934 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+63941 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000002(String), SL_ResultReport_000001(String), ahnsu234(String), 2(String), C:/attachments/(String), GkovLQblo9IJqmTGDPBCPVZW2MGv5wsR.jpg(String), 2. question.jpg(String), jpg(String)
+63972 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+63972 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
