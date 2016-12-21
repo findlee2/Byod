@@ -15,7 +15,7 @@ public interface SrchManageMapper {
 	public List<SrchManageVO> selectSrchInfoList(SrchManageVO srchVO);
 	
 	/**
-	 * 조사업무 상세 조회(조사자용)
+	 * 조사업무 상세 조회(조사자용 및 관리자용)
 	 * @param srchVO
 	 * @return
 	 */
@@ -26,12 +26,6 @@ public interface SrchManageMapper {
 	 * @return
 	 */
 	public List<SrchManageVO> selectUserSrchInfoList();
-	
-	/**
-	 * 조사업무 상세 조회(관리자용)
-	 * @return
-	 */
-	public SrchManageVO selectUserSrchDetailInfo(SrchManageVO srchVO);
 	
 	/**
 	 * 조사업무 등록 전 보고서 번호 조회(관리자용)

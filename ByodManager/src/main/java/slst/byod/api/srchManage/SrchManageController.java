@@ -30,6 +30,7 @@ import slst.byod.api.attchFileManage.AttchFileManageMapper;
 import slst.byod.api.attchFileManage.AttchFileManageVO;
 import slst.byod.api.logManage.LogManageUtilParsingController;
 import slst.byod.api.userManage.UserManageVO;
+import slst.byod.api.util.Base64Utils;
 import slst.byod.api.util.ByodApiUtil;
 
 @Slf4j
@@ -41,12 +42,17 @@ public class SrchManageController extends LogManageUtilParsingController{
 	@Autowired SrchManageMapper      srchManageMapper;
 	@Autowired AttchFileManageMapper attchManageMapper;
 	
+	@Value("${Globals.RoundKey}")
+	private String RoundKey;
+	
 	private static String fileStorePath;
 	
 	@Value("${fileStorePath}")
 	private void setFileStroePath(String path){
 		fileStorePath = path;
 	}
+	
+	Base64Utils base64  = new Base64Utils();
 	
 	HttpSession session = null;
 	
@@ -61,8 +67,8 @@ public class SrchManageController extends LogManageUtilParsingController{
 	    @ApiImplicitParam(name = "userId",   value = "사용자 아이디",  required = true, dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/SrchInfoList", method = RequestMethod.GET)
-	public ResponseEntity<Object> SrchInfoList(@RequestParam String userId) throws Exception {
+	@RequestMapping(value = "/Byod/srchInfoList", method = RequestMethod.GET)
+	public ResponseEntity<Object> srchInfoList(@RequestParam String userId) throws Exception {
 
 		SrchManageVO srchVO             = new SrchManageVO();
 		List<SrchManageVO> responseBody = null;
@@ -70,6 +76,21 @@ public class SrchManageController extends LogManageUtilParsingController{
 			
 		responseBody = srchManageMapper.selectSrchInfoList(srchVO);
 
+		for(int i=0; i<responseBody.size(); i++){
+			//복호화
+			responseBody.get(i).setBusiness_nm(base64.decrypt(responseBody.get(i).getBusiness_nm(), RoundKey));
+			responseBody.get(i).setObject_place_nm(base64.decrypt(responseBody.get(i).getObject_place_nm(), RoundKey));
+			responseBody.get(i).setObject_location(base64.decrypt(responseBody.get(i).getObject_location(), RoundKey));
+			responseBody.get(i).setObject_use(base64.decrypt(responseBody.get(i).getObject_use(), RoundKey));
+			responseBody.get(i).setObject_buil_struc(base64.decrypt(responseBody.get(i).getObject_buil_struc(), RoundKey));
+			responseBody.get(i).setCheck_extgsh_result(base64.decrypt(responseBody.get(i).getCheck_extgsh_result(), RoundKey));
+			responseBody.get(i).setCheck_alarm_equip_result(base64.decrypt(responseBody.get(i).getCheck_alarm_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_extgsh_equip_result(base64.decrypt(responseBody.get(i).getCheck_extgsh_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_flee_equip_result(base64.decrypt(responseBody.get(i).getCheck_flee_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_etc_equip_result(base64.decrypt(responseBody.get(i).getCheck_etc_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_user_nm(base64.decrypt(responseBody.get(i).getCheck_user_nm(), RoundKey));
+		}
+		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
 	
@@ -84,15 +105,27 @@ public class SrchManageController extends LogManageUtilParsingController{
 	    @ApiImplicitParam(name = "reportNo",   value = "보고서 번호",  required = true, dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/SrchDetailInfo", method = RequestMethod.GET)
-	public ResponseEntity<Object> SrchDetailInfo(@RequestParam String reportNo) throws Exception {
+	@RequestMapping(value = "/Byod/srchDetailInfo", method = RequestMethod.GET)
+	public ResponseEntity<Object> srchDetailInfo(@RequestParam String reportNo) throws Exception {
 
 		SrchManageVO srchVO       = new SrchManageVO();
 		SrchManageVO responseBody = null;
 		srchVO.setReport_no(reportNo);
 			
 		responseBody = srchManageMapper.selectSrchDetailInfo(srchVO);
-
+		//복호화
+		responseBody.setBusiness_nm(base64.decrypt(responseBody.getBusiness_nm(), RoundKey));
+		responseBody.setObject_place_nm(base64.decrypt(responseBody.getObject_place_nm(), RoundKey));
+		responseBody.setObject_location(base64.decrypt(responseBody.getObject_location(), RoundKey));
+		responseBody.setObject_use(base64.decrypt(responseBody.getObject_use(), RoundKey));
+		responseBody.setObject_buil_struc(base64.decrypt(responseBody.getObject_buil_struc(), RoundKey));
+		responseBody.setCheck_extgsh_result(base64.decrypt(responseBody.getCheck_extgsh_result(), RoundKey));
+		responseBody.setCheck_alarm_equip_result(base64.decrypt(responseBody.getCheck_alarm_equip_result(), RoundKey));
+		responseBody.setCheck_extgsh_equip_result(base64.decrypt(responseBody.getCheck_extgsh_equip_result(), RoundKey));
+		responseBody.setCheck_flee_equip_result(base64.decrypt(responseBody.getCheck_flee_equip_result(), RoundKey));
+		responseBody.setCheck_etc_equip_result(base64.decrypt(responseBody.getCheck_etc_equip_result(), RoundKey));
+		responseBody.setCheck_user_nm(base64.decrypt(responseBody.getCheck_user_nm(), RoundKey));
+				
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
 	
@@ -104,11 +137,26 @@ public class SrchManageController extends LogManageUtilParsingController{
 	 */
 	@ApiOperation(value = "조사업무 목록 조회(관리자용)", notes = "관리자가 조사 업무  리스트를  조회한다.", response = SrchManageVO.class)
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/AdminSrchInfoList", method = RequestMethod.GET)
-	public ResponseEntity<Object> AdminSrchInfoList() throws Exception {
+	@RequestMapping(value = "/Byod/adminSrchInfoList", method = RequestMethod.GET)
+	public ResponseEntity<Object> adminSrchInfoList() throws Exception {
 		
 		List<SrchManageVO> responseBody = srchManageMapper.selectUserSrchInfoList();
 
+		for(int i=0; i<responseBody.size(); i++){
+			//복호화
+			responseBody.get(i).setBusiness_nm(base64.decrypt(responseBody.get(i).getBusiness_nm(), RoundKey));
+			responseBody.get(i).setObject_place_nm(base64.decrypt(responseBody.get(i).getObject_place_nm(), RoundKey));
+			responseBody.get(i).setObject_location(base64.decrypt(responseBody.get(i).getObject_location(), RoundKey));
+			responseBody.get(i).setObject_use(base64.decrypt(responseBody.get(i).getObject_use(), RoundKey));
+			responseBody.get(i).setObject_buil_struc(base64.decrypt(responseBody.get(i).getObject_buil_struc(), RoundKey));
+			responseBody.get(i).setCheck_extgsh_result(base64.decrypt(responseBody.get(i).getCheck_extgsh_result(), RoundKey));
+			responseBody.get(i).setCheck_alarm_equip_result(base64.decrypt(responseBody.get(i).getCheck_alarm_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_extgsh_equip_result(base64.decrypt(responseBody.get(i).getCheck_extgsh_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_flee_equip_result(base64.decrypt(responseBody.get(i).getCheck_flee_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_etc_equip_result(base64.decrypt(responseBody.get(i).getCheck_etc_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_user_nm(base64.decrypt(responseBody.get(i).getCheck_user_nm(), RoundKey));
+		}
+		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
 	
@@ -123,15 +171,28 @@ public class SrchManageController extends LogManageUtilParsingController{
 	    @ApiImplicitParam(name = "reportNo",   value = "보고서 번호",  required = true, dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/AdminSrchDetailInfo", method = RequestMethod.GET)
-	public ResponseEntity<Object> AdminSrchDetailInfo(@RequestParam("reportNo") String reportNo) throws Exception {
+	@RequestMapping(value = "/Byod/adminSrchDetailInfo", method = RequestMethod.GET)
+	public ResponseEntity<Object> adminSrchDetailInfo(@RequestParam("reportNo") String reportNo) throws Exception {
 
 		SrchManageVO srchVO = new SrchManageVO();
 		
 		srchVO.setReport_no(reportNo);
 		
-		SrchManageVO responseBody = srchManageMapper.selectUserSrchDetailInfo(srchVO);
+		SrchManageVO responseBody = srchManageMapper.selectSrchDetailInfo(srchVO);
 
+		//복호화
+		responseBody.setBusiness_nm(base64.decrypt(responseBody.getBusiness_nm(), RoundKey));
+		responseBody.setObject_place_nm(base64.decrypt(responseBody.getObject_place_nm(), RoundKey));
+		responseBody.setObject_location(base64.decrypt(responseBody.getObject_location(), RoundKey));
+		responseBody.setObject_use(base64.decrypt(responseBody.getObject_use(), RoundKey));
+		responseBody.setObject_buil_struc(base64.decrypt(responseBody.getObject_buil_struc(), RoundKey));
+		responseBody.setCheck_extgsh_result(base64.decrypt(responseBody.getCheck_extgsh_result(), RoundKey));
+		responseBody.setCheck_alarm_equip_result(base64.decrypt(responseBody.getCheck_alarm_equip_result(), RoundKey));
+		responseBody.setCheck_extgsh_equip_result(base64.decrypt(responseBody.getCheck_extgsh_equip_result(), RoundKey));
+		responseBody.setCheck_flee_equip_result(base64.decrypt(responseBody.getCheck_flee_equip_result(), RoundKey));
+		responseBody.setCheck_etc_equip_result(base64.decrypt(responseBody.getCheck_etc_equip_result(), RoundKey));
+		responseBody.setCheck_user_nm(base64.decrypt(responseBody.getCheck_user_nm(), RoundKey));
+				
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
 	
@@ -141,8 +202,8 @@ public class SrchManageController extends LogManageUtilParsingController{
 	 * @throws Exception
 	 */
 	@ApiOperation(value = "조사업무 등록 전 보고서 번호 조회(관리자용)", notes = "관리자가 조사 업무 등록전에 생성가능한 보고서 번호를 조회한다.", response = SrchManageVO.class)	
-	@RequestMapping(value = "/Byod/AdminBeforeRegistBusiness", method = RequestMethod.GET)
-	public ResponseEntity<Object> AdminBeforeRegistBusiness() throws Exception {
+	@RequestMapping(value = "/Byod/adminBeforeRegistBusiness", method = RequestMethod.GET)
+	public ResponseEntity<Object> adminBeforeRegistBusiness() throws Exception {
 
 		SrchManageVO responseBody = new SrchManageVO();
 		String tmpResult          = "";
@@ -200,8 +261,8 @@ public class SrchManageController extends LogManageUtilParsingController{
 	    @ApiImplicitParam(name = "locationLon",                  value = "소재지 경도",               	required = true,  dataType = "string", paramType = "query")	    
 	  })	
 	@ApiResponses(value = {@ApiResponse(code = 409, message = "Conflict(해당 보고서가 이미 존재)")})
-	@RequestMapping(value = "/Byod/AdminRegistBusiness", method = RequestMethod.POST)	
-	public ResponseEntity<String> AdminRegistBusiness(@RequestParam("reportNo") String reportNo,
+	@RequestMapping(value = "/Byod/adminRegistBusiness", method = RequestMethod.POST)	
+	public ResponseEntity<String> adminRegistBusiness(@RequestParam("reportNo") String reportNo,
 			@RequestParam("userId") String userId,   @RequestParam("businessNm") String businessNm,
 			@RequestParam("objectPlaceNm") String objectPlaceNm, 
 			@RequestParam("objectRelationUser") String objectRelationUser,
@@ -222,21 +283,28 @@ public class SrchManageController extends LogManageUtilParsingController{
 		
 		SrchManageVO responseBody     = new SrchManageVO();
 		session                       = request.getSession();
+		UserManageVO UserVO           = (UserManageVO)request.getSession().getAttribute("userVO");
 		
 		try{
+			
+			if(ByodApiUtil.isEmpty(UserVO)){
+				log.info("[ByodApiUtil.isEmpty(String)] : null");
+				return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+			}
+			
 			responseBody.setReport_no(reportNo);
 			responseBody.setUser_id(userId);
-			responseBody.setBusiness_nm(businessNm);
-			responseBody.setObject_place_nm(objectPlaceNm);
+			responseBody.setBusiness_nm(base64.encrypt(businessNm, RoundKey));
+			responseBody.setObject_place_nm(base64.encrypt(objectPlaceNm, RoundKey));
 			responseBody.setObject_relation_user(objectRelationUser);
 			responseBody.setObject_relation_user_home_tel(objectRelationUserHomeTel);
 			responseBody.setObject_relation_user_mobil_tel(objectRelationUserMobilTel);
-			responseBody.setObject_location(objectLocation);
-			responseBody.setObject_use(objectUse);
-			responseBody.setObject_buil_struc(objectBuilStruc);
+			responseBody.setObject_location(base64.encrypt(objectLocation, RoundKey));
+			responseBody.setObject_use(base64.encrypt(objectUse, RoundKey));//
+			responseBody.setObject_buil_struc(base64.encrypt(objectBuilStruc, RoundKey));
 			responseBody.setCheck_period_start(checkPeriodStart);
 			responseBody.setCheck_period_end(checkPeriodEnd);
-			responseBody.setCheck_user_nm(checkUserNm);
+			responseBody.setCheck_user_nm(base64.encrypt(checkUserNm, RoundKey));
 			responseBody.setCheck_user_qualfication_class(checkUserQualficationClass);
 			responseBody.setCheck_user_qualfication_no(checkUserQualficationNo);
 			responseBody.setHead_fire_depart(headFireDepart);
@@ -245,35 +313,29 @@ public class SrchManageController extends LogManageUtilParsingController{
 			
 			srchManageMapper.insertRegistBusiness(responseBody);
 			
-			//로그생성
-			UserManageVO UserVO = (UserManageVO)request.getSession().getAttribute("userVO");
-			
-			if(UserVO != null){
 				
-				/**
-				 * [로그생성]
-				 * [argument]
-				 * 구분 (NotNull)
-				      보고서 번호 
-				      업무명            
-				      보고서 담당자 아이디        
-				      보고서 담당자 이름                   
-				      최종 보고서 업로드 시간
-				      보고서 처리구분
-				      단말기 접속경로
-				      단말기위치 경도
-				      단말기위치 위도
-				      처리자 이름(NotNull)
-				      처리자 아이디(NotNull)
-				 */
-				AdminInsertRegistBusinessLog("3",reportNo,businessNm,userId,checkUserNm,null,"1", null, 
-						null, null, UserVO.getUser_nm(),UserVO.getUser_id());
+			/**
+			 * [로그생성]
+			 * [argument]
+			 * 구분 (NotNull)
+			      보고서 번호 
+			      업무명            
+			      보고서 담당자 아이디        
+			      보고서 담당자 이름                   
+			      최종 보고서 업로드 시간
+			      보고서 처리구분
+			      단말기 접속경로
+			      단말기위치 경도
+			      단말기위치 위도
+			      처리자 이름(NotNull)
+			      처리자 아이디(NotNull)
+			 */
+			adminInsertRegistBusinessLog("3",reportNo,businessNm,userId,checkUserNm,null,"1", null, 
+					null, null, UserVO.getUser_nm(),UserVO.getUser_id());
 				
-			}
 			
 		}catch(Exception e){
 			e.getStackTrace();
-			e.getMessage();
 			return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
 		}
 		
@@ -324,8 +386,8 @@ public class SrchManageController extends LogManageUtilParsingController{
 	    @ApiImplicitParam(name = "locationLat",                  value = "소재지 위도",                	required = false,  dataType = "string", paramType = "query"),
 	    @ApiImplicitParam(name = "locationLon",                  value = "소재지 경도",               	required = false,  dataType = "string", paramType = "query")	    
 	  })	
-	@RequestMapping(value = "/Byod/AdminUpdateBusiness", method = RequestMethod.PUT)	
-	public ResponseEntity<String> AdminUpdateBusiness(@RequestParam("reportNo") String reportNo,
+	@RequestMapping(value = "/Byod/adminUpdateBusiness", method = RequestMethod.PUT)	
+	public ResponseEntity<String> adminUpdateBusiness(@RequestParam("reportNo") String reportNo,
 			@RequestParam(value="userId", required=false) String userId,   
 			@RequestParam(value="businessNm", required=false) String businessNm,
 			@RequestParam(value="objectPlaceNm", required=false) String objectPlaceNm, 
@@ -347,21 +409,28 @@ public class SrchManageController extends LogManageUtilParsingController{
 		
 		SrchManageVO responseBody     = new SrchManageVO();
 		session                       = request.getSession();
+		UserManageVO UserVO           = (UserManageVO)request.getSession().getAttribute("userVO");
 		
 		try{
+			
+			if(ByodApiUtil.isEmpty(UserVO)){
+				log.info("[ByodApiUtil.isEmpty(UserVO)] : null");
+				return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+			}
+			
 			responseBody.setReport_no(reportNo);
 			responseBody.setUser_id(userId);
-			responseBody.setBusiness_nm(businessNm);
-			responseBody.setObject_place_nm(objectPlaceNm);
+			responseBody.setBusiness_nm(base64.encrypt(businessNm, RoundKey));
+			responseBody.setObject_place_nm(base64.encrypt(objectPlaceNm, RoundKey));
 			responseBody.setObject_relation_user(objectRelationUser);
 			responseBody.setObject_relation_user_home_tel(objectRelationUserHomeTel);
 			responseBody.setObject_relation_user_mobil_tel(objectRelationUserMobilTel);
-			responseBody.setObject_location(objectLocation);
-			responseBody.setObject_use(objectUse);
-			responseBody.setObject_buil_struc(objectBuilStruc);
+			responseBody.setObject_location(base64.encrypt(objectLocation, RoundKey));
+			responseBody.setObject_use(base64.encrypt(objectUse, RoundKey));
+			responseBody.setObject_buil_struc(base64.encrypt(objectBuilStruc, RoundKey));
 			responseBody.setCheck_period_start(checkPeriodStart);
 			responseBody.setCheck_period_end(checkPeriodEnd);
-			responseBody.setCheck_user_nm(checkUserNm);
+			responseBody.setCheck_user_nm(base64.encrypt(checkUserNm, RoundKey));
 			responseBody.setCheck_user_qualfication_class(checkUserQualficationClass);
 			responseBody.setCheck_user_qualfication_no(checkUserQualficationNo);
 			responseBody.setHead_fire_depart(headFireDepart);
@@ -369,35 +438,28 @@ public class SrchManageController extends LogManageUtilParsingController{
 			responseBody.setLocation_lon(locationLon);
 			
 			srchManageMapper.updateBusiness(responseBody);
-			
-			//로그생성
-			UserManageVO UserVO = (UserManageVO)request.getSession().getAttribute("userVO");
-			
-			if(UserVO != null){
 				
-				/**
-				 * [로그생성]
-				 * [argument]
-				 * 구분 (NotNull)
-				      보고서 번호 
-				      업무명            
-				      보고서 담당자 아이디        
-				      보고서 담당자 이름                   
-				      최종 보고서 업로드 시간
-				      보고서 처리구분
-				      단말기 접속경로
-				      단말기위치 경도
-				      단말기위치 위도
-				      처리자 이름(NotNull)
-				      처리자 아이디(NotNull)
-				 */
-				AdminInsertRegistBusinessLog("3",reportNo,businessNm,userId,checkUserNm,null,"2", null, 
-						null, null, UserVO.getUser_nm(),UserVO.getUser_id());				
-			}
+			/**
+			 * [로그생성]
+			 * [argument]
+			 * 구분 (NotNull)
+			      보고서 번호 
+			      업무명            
+			      보고서 담당자 아이디        
+			      보고서 담당자 이름                   
+			      최종 보고서 업로드 시간
+			      보고서 처리구분
+			      단말기 접속경로
+			      단말기위치 경도
+			      단말기위치 위도
+			      처리자 이름(NotNull)
+			      처리자 아이디(NotNull)
+			 */
+			adminInsertRegistBusinessLog("3",reportNo,businessNm,userId,checkUserNm,null,"2", null, 
+					null, null, UserVO.getUser_nm(),UserVO.getUser_id());				
 			
 		}catch(Exception e){
 			e.getStackTrace();
-			e.getMessage();
 			return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
 		}
 		
@@ -409,24 +471,32 @@ public class SrchManageController extends LogManageUtilParsingController{
 	 * @return
 	 * @throws Exception
 	 */
-	@ApiOperation(value = "조사업무 삭제(공통 또는 관리자용)", notes = "관리자 또는 조사자가 조사 업무를 삭제한다.(로그를 남길려면 로그인 후 진행해야한다.)", response = SrchManageVO.class)
+	@ApiOperation(value = "조사업무 삭제(공통 또는 관리자용)", notes = "관리자 또는 조사자가 조사 업무를 삭제한다.(로그를 남길려면 로그인 후 진행해야한다.)")
 	@ApiImplicitParams({
 	    @ApiImplicitParam(name = "reportNo",   value = "보고서 번호",  required = true, dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/AdminSrchInfoDelete", method = RequestMethod.DELETE)
-	public ResponseEntity<String> AdminSrchInfoDelete(@RequestParam("reportNo") String reportNo,
+	@RequestMapping(value = "/Byod/adminSrchInfoDelete", method = RequestMethod.DELETE)
+	public ResponseEntity<String> adminSrchInfoDelete(@RequestParam("reportNo") String reportNo,
 													  HttpServletRequest request) throws Exception {
 
 		UserManageVO userVO   = (UserManageVO)request.getSession().getAttribute("userVO");
 		SrchManageVO srchVO   = new SrchManageVO();
 		SrchManageVO reSrchVO = null;
 		
+		if(ByodApiUtil.isEmpty(userVO)){
+			log.info("[ByodApiUtil.isEmpty(userVO)] : null");
+			return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+		}
+		
 		srchVO.setReport_no(reportNo);
 		
 		srchManageMapper.deleteSrchInfoList(srchVO);
 		
-		reSrchVO = (SrchManageVO) srchManageMapper.selectUserSrchDetailInfo(srchVO);
+		reSrchVO = (SrchManageVO) srchManageMapper.selectSrchDetailInfo(srchVO);
+		
+		reSrchVO.setBusiness_nm(base64.decrypt(reSrchVO.getBusiness_nm(), RoundKey));
+		reSrchVO.setCheck_user_nm(base64.decrypt(reSrchVO.getBusiness_nm(), RoundKey));
 		
 		/**
 		 * [로그생성]
@@ -444,7 +514,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 		      처리자 이름(NotNull)
 		      처리자 아이디(NotNull)
 		 */
-		AdminInsertRegistBusinessLog("3",reSrchVO.getReport_no(),reSrchVO.getBusiness_nm(),reSrchVO.getUser_id(),
+		adminInsertRegistBusinessLog("3",reSrchVO.getReport_no(),reSrchVO.getBusiness_nm(),reSrchVO.getUser_id(),
 				reSrchVO.getCheck_user_nm(),null,"3", null,null, null,userVO.getUser_nm(),userVO.getUser_id());
 		
 		return new ResponseEntity<String>(HttpStatus.OK);
@@ -495,8 +565,8 @@ public class SrchManageController extends LogManageUtilParsingController{
 		
 	  })	
 	@ApiResponses(value = {@ApiResponse(code = 409, message = "Conflict(해당 보고서가 이미 존재)")})
-	@RequestMapping(value = "/Byod/SrchUserReportUpload", method = RequestMethod.POST,  consumes = {"multipart/form-data","application/x-www-form-urlencoded"})	
-	public ResponseEntity<String> SrchUserReportUpload(@RequestParam("reportNo") String reportNo,
+	@RequestMapping(value = "/Byod/srchUserReportUpload", method = RequestMethod.POST,  consumes = {"multipart/form-data","application/x-www-form-urlencoded"})	
+	public ResponseEntity<String> srchUserReportUpload(@RequestParam("reportNo") String reportNo,
 			@RequestParam("userId") String userId,   
 			@RequestParam("networkPath") String networkPath,
 			@RequestParam("locationLat") String locationLat, 
@@ -559,9 +629,10 @@ public class SrchManageController extends LogManageUtilParsingController{
 			//로그생성
 			UserManageVO UserVO = (UserManageVO)request.getSession().getAttribute("userVO");
 			
+			//테스트관련 Exception 대신 조건문으로 [임시 블록처러]
 			if(UserVO != null){
 				
-				SrchManageVO logSrch = (SrchManageVO)srchManageMapper.selectUserSrchDetailInfo(responseBody);
+				SrchManageVO logSrch = (SrchManageVO)srchManageMapper.selectSrchDetailInfo(responseBody);
 				
 				/**
 				 * [로그생성]
@@ -579,7 +650,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 				      처리자 이름(NotNull)
 				      처리자 아이디(NotNull)
 				 */
-				AdminInsertRegistBusinessLog("3",logSrch.getReport_no(),logSrch.getBusiness_nm(),userId,
+				adminInsertRegistBusinessLog("3",logSrch.getReport_no(),logSrch.getBusiness_nm(),userId,
 						logSrch.getCheck_user_nm(),null,"4", networkPath, 
 						locationLon, locationLat, UserVO.getUser_nm(),UserVO.getUser_id());
 				
@@ -640,9 +711,9 @@ public class SrchManageController extends LogManageUtilParsingController{
 					attchVO.setReport_no(reportNo);
 					attchVO.setUser_id(userId);
 					attchVO.setAttch_file_kind(extensionGb);
-					attchVO.setAttch_file_path(fileStorePath);
+					attchVO.setAttch_file_path(base64.encrypt(fileStorePath, RoundKey));
 					attchVO.setAttch_file_nm(destinationFileName);
-					attchVO.setOri_file_nm(sourceFile[i].getOriginalFilename());
+					attchVO.setOri_file_nm(base64.encrypt(sourceFile[i].getOriginalFilename(), RoundKey));
 					attchVO.setAttch_file_extsn(sourceFileNameExtension);
 					
 					//첨부파일 정보 테이블에 insert
@@ -669,8 +740,8 @@ public class SrchManageController extends LogManageUtilParsingController{
 	    @ApiImplicitParam(name = "userId",   value = "사용자 아이디",  required = true, dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/SrchFinishInfoFList", method = RequestMethod.GET)
-	public ResponseEntity<Object> SrchFinishInfoFList(@RequestParam String userId) throws Exception {
+	@RequestMapping(value = "/Byod/srchFinishInfoFList", method = RequestMethod.GET)
+	public ResponseEntity<Object> srchFinishInfoFList(@RequestParam String userId) throws Exception {
 
 		SrchManageVO srchVO             = new SrchManageVO();
 		List<SrchManageVO> responseBody = null;
@@ -678,22 +749,27 @@ public class SrchManageController extends LogManageUtilParsingController{
 			
 		responseBody = srchManageMapper.selectSrchFinishInfoList(srchVO);
 
+		for(int i=0; i<responseBody.size(); i++){
+			responseBody.get(i).setBusiness_nm(base64.decrypt(responseBody.get(i).getBusiness_nm(), RoundKey));
+		}
+		
+		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
 	
 	/**
-	 * 완료된 조사업무 상세 조회(조사자용)
+	 * 완료된 조사업무 상세 조회(공통)
 	 * @param reportNo
 	 * @return
 	 * @throws Exception
 	 */
-	@ApiOperation(value = "완료된 조사업무 상세 조회(조사자용)", notes = "조사자가 자신의 완료된 조사업무를  상세 조회한다.", response = SrchManageVO.class)
+	@ApiOperation(value = "완료된 조사업무 상세 조회(공통)", notes = "완료된 조사업무를  상세 조회한다.", response = SrchManageVO.class)
 	@ApiImplicitParams({
 		@ApiImplicitParam(name = "reportNo",  value = "보고서 번호",  required = true,   dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/SrchFinishDetailInfo", method = RequestMethod.GET)
-	public ResponseEntity<Object> SrchFinishDetailInfo(@RequestParam String reportNo) throws Exception {
+	@RequestMapping(value = "/Byod/srchFinishDetailInfo", method = RequestMethod.GET)
+	public ResponseEntity<Object> srchFinishDetailInfo(@RequestParam String reportNo) throws Exception {
 
 		SrchManageVO srchVO       = new SrchManageVO();
 		SrchManageVO responseBody = null;
@@ -708,19 +784,31 @@ public class SrchManageController extends LogManageUtilParsingController{
 		
 		responseBody = (SrchManageVO)srchManageMapper.selectSrchFinishDetailInfo(srchVO);
 		
+		//복호화
+		responseBody.setBusiness_nm(base64.decrypt(responseBody.getBusiness_nm(), RoundKey));
+		responseBody.setObject_place_nm(base64.decrypt(responseBody.getObject_place_nm(), RoundKey));
+		responseBody.setObject_location(base64.decrypt(responseBody.getObject_location(), RoundKey));
+		responseBody.setObject_use(base64.decrypt(responseBody.getObject_use(), RoundKey));
+		responseBody.setObject_buil_struc(base64.decrypt(responseBody.getObject_buil_struc(), RoundKey));
+		responseBody.setCheck_extgsh_result(base64.decrypt(responseBody.getCheck_extgsh_result(), RoundKey));
+		responseBody.setCheck_alarm_equip_result(base64.decrypt(responseBody.getCheck_alarm_equip_result(), RoundKey));
+		responseBody.setCheck_extgsh_equip_result(base64.decrypt(responseBody.getCheck_extgsh_equip_result(), RoundKey));
+		responseBody.setCheck_flee_equip_result(base64.decrypt(responseBody.getCheck_flee_equip_result(), RoundKey));
+		responseBody.setCheck_etc_equip_result(base64.decrypt(responseBody.getCheck_etc_equip_result(), RoundKey));
+		responseBody.setCheck_user_nm(base64.decrypt(responseBody.getCheck_user_nm(), RoundKey));
+		
 		if(cnt > 0){
 			responseBody.setAttch_file_cnt(cnt);
 		}
 		//첨부된 이미지 체크
-		if(responseBody.getImg_attch_file_nm() != null){
+		if(!ByodApiUtil.isEmpty(responseBody.getImg_attch_file_nm())){
 			responseBody.setImg_attch_file_url(fileStorePath + responseBody.getImg_attch_file_nm());			
 		}
 		
 		//첨부된 오디오 체크
-		if(responseBody.getAudio_attch_file_nm() != null){			
+		if(!ByodApiUtil.isEmpty(responseBody.getAudio_attch_file_nm())){			
 			responseBody.setAudio_attch_file_url(fileStorePath + responseBody.getAudio_attch_file_nm());
 		}
-		
 		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}

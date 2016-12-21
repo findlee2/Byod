@@ -6,13 +6,17 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class ByodApiUtil {
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
+public class ByodApiUtil {
 	
 	/**
 	 * 보고서 NO, 로그 ID, 조사장비 ID, 첨부파일 ID 파싱 
@@ -102,9 +106,9 @@ public class ByodApiUtil {
 				
 				rtnStr = ((HashMap) jsonObject.get("new")).get("name").toString();
 				
-				System.out.println("Output from Server .... \n");
+				log.info("Output from Server .... ");
 				
-				System.out.println("접속위치 ["+rtnStr+"]");
+				log.info("접속위치 : ["+rtnStr+"]");
 				
 				conn.disconnect();
 				
@@ -124,4 +128,28 @@ public class ByodApiUtil {
 		
 		return rtnStr;
 	}
+	
+	/**
+	 * null 체크(null이면 true 리턴)
+	 * @param s
+	 * @return
+	 */
+	public static boolean isEmpty(Object s) {
+        if (s == null) {
+            return true;
+        }
+        if ((s instanceof String) && (((String)s).trim().length() == 0)) {
+            return true;
+        }
+        if (s instanceof Map) {
+            return ((Map<?, ?>)s).isEmpty();
+        }
+        if (s instanceof List) {
+            return ((List<?>)s).isEmpty();
+        }
+        if (s instanceof Object[]) {
+            return (((Object[])s).length == 0);
+        }
+        return false;
+    }
 }

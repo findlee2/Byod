@@ -37,8 +37,8 @@ public class SrchEqupmntManageController {
 	 * @throws Exception
 	 */
 	@ApiOperation(value = "전체 조사장비 조회(관리자용)", notes = "관리자가 전체 조사장비 조회를 한다.", response = SrchEqupmntManageVO.class)
-	@RequestMapping(value = "/Byod/AdminSrchEqupmntInfoAllList", method = RequestMethod.GET)
-	public ResponseEntity<Object> AdminSrchEqupmntInfoAllList() throws Exception {
+	@RequestMapping(value = "/Byod/adminSrchEqupmntInfoAllList", method = RequestMethod.GET)
+	public ResponseEntity<Object> adminSrchEqupmntInfoAllList() throws Exception {
 		
 		List<SrchEqupmntManageVO> responseBody = srchEqupmntManageMapper.selectAdminSrchEqupmntInfoList(null);
 		
@@ -60,8 +60,8 @@ public class SrchEqupmntManageController {
 	@ApiImplicitParams({
 		@ApiImplicitParam(name = "srchEqupmntId", value = "조사장비 고유번호",	required = true,  dataType = "string", paramType = "query")
 	  })
-	@RequestMapping(value = "/Byod/AdminSrchEqupmntInfoList", method = RequestMethod.GET)
-	public ResponseEntity<Object> AdminSrchEqupmntInfoList(@RequestParam("srchEqupmntId") String srchEqupmntId) throws Exception {
+	@RequestMapping(value = "/Byod/adminSrchEqupmntInfoList", method = RequestMethod.GET)
+	public ResponseEntity<Object> adminSrchEqupmntInfoList(@RequestParam("srchEqupmntId") String srchEqupmntId) throws Exception {
 		
 			SrchEqupmntManageVO equpmntVO = new SrchEqupmntManageVO();
 			equpmntVO.setSrch_equpmnt_id(srchEqupmntId);
@@ -89,8 +89,8 @@ public class SrchEqupmntManageController {
 	    @ApiImplicitParam(name = "useYn",      			value = "사용여부",	  	required = false, dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 409, message = "Conflict(해당 장비가 이미 존재)")})
-	@RequestMapping(value = "/Byod/AdminSrchEqupmntRegist", method = RequestMethod.POST)
-	public ResponseEntity<String> AdminSrchEqupmntRegist(@RequestParam("srchEqupmntIdentiNo") String srchEqupmntIdentiNo,
+	@RequestMapping(value = "/Byod/adminSrchEqupmntRegist", method = RequestMethod.POST)
+	public ResponseEntity<String> adminSrchEqupmntRegist(@RequestParam("srchEqupmntIdentiNo") String srchEqupmntIdentiNo,
 														 @RequestParam("srchEqupmntKind") String srchEqupmntKind,
 														 @RequestParam(value="userNm", required=false) String userNm,
 														 @RequestParam(value="userId", required=false) String userId,
@@ -105,8 +105,7 @@ public class SrchEqupmntManageController {
 		equpmntVO.setSrch_equpmnt_id(ByodApiUtil.numberParsing("3",equpmntId));
 		equpmntVO.setSrch_equpmnt_identi_no(base64.encrypt(srchEqupmntIdentiNo,RoundKey));
 		equpmntVO.setSrch_equpmnt_kind(base64.encrypt(srchEqupmntKind,RoundKey));
-		equpmntVO.setUser_nm(base64.encrypt(userNm,RoundKey));
-		
+		equpmntVO.setUser_nm(base64.encrypt(userNm,RoundKey));		
 		equpmntVO.setUser_id(userId);
 		equpmntVO.setUse_yn(useYn);
 		
@@ -137,8 +136,8 @@ public class SrchEqupmntManageController {
 	    @ApiImplicitParam(name = "useYn",      			value = "사용여부",	  	required = false, dataType = "string", paramType = "query")
 	  })
 	@ApiResponses(value = {@ApiResponse(code = 409, message = "Conflict(해당 장비가 이미 존재)")})
-	@RequestMapping(value = "/Byod/AdminSrchEqupmntUpdate", method = RequestMethod.PUT)
-	public ResponseEntity<String> AdminSrchEqupmntUpdate(@RequestParam("srchEqupmntId") String srchEqupmntId,
+	@RequestMapping(value = "/Byod/adminSrchEqupmntUpdate", method = RequestMethod.PUT)
+	public ResponseEntity<String> adminSrchEqupmntUpdate(@RequestParam("srchEqupmntId") String srchEqupmntId,
 														 @RequestParam(value="srchEqupmntIdentiNo", required=false) String srchEqupmntIdentiNo,
 														 @RequestParam(value="srchEqupmntKind", required=false) String srchEqupmntKind,
 														 @RequestParam(value="userNm", required=false) String userNm,
@@ -176,8 +175,8 @@ public class SrchEqupmntManageController {
 	@ApiImplicitParams({
 		@ApiImplicitParam(name = "srchEqupmntId", value = "조사장비 고유번호",	required = true,  dataType = "string", paramType = "query")
 	  })	
-	@RequestMapping(value = "/Byod/AdminSrchEqupmntDelete", method = RequestMethod.DELETE)	
-	public ResponseEntity<String> AdminSrchEqupmntDelete(@RequestParam("srchEqupmntId") String srchEqupmntId) throws Exception {
+	@RequestMapping(value = "/Byod/adminSrchEqupmntDelete", method = RequestMethod.DELETE)	
+	public ResponseEntity<String> adminSrchEqupmntDelete(@RequestParam("srchEqupmntId") String srchEqupmntId) throws Exception {
 		
 		SrchEqupmntManageVO equpmntVO  = new SrchEqupmntManageVO();
 		
