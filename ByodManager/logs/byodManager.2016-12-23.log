@@ -1,0 +1,68 @@
+645  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 13248 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+656  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+657  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6902 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.743 seconds (JVM running for 7.604)
+775  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 1328 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+784  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+784  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5882 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.679 seconds (JVM running for 6.478)
+6466 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+6708 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+6708 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+6733 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+7109 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+7134 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+37863 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/adminSrchEqupmntRegist
+38290 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectMaxEqupmntId - ==>  Preparing: SELECT max(srch_equpmnt_id) FROM bd_srch_equpmnt_info 
+38306 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectMaxEqupmntId - ==> Parameters: 
+38340 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectMaxEqupmntId - <==      Total: 1
+38347 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.insertAdminSrchEqupmnt - ==>  Preparing: INSERT INTO bd_srch_equpmnt_info( srch_equpmnt_id, srch_equpmnt_identi_no, srch_equpmnt_kind, user_nm, user_id, cre_dt, use_yn) VALUES( ?, ?, ?, ?, ?, now(), ?) 
+38349 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.insertAdminSrchEqupmnt - ==> Parameters: EqupmntID_000005(String), midRgmiz0YC/Wp7GuqWWwA==(String), tf3xF7Ao830FuQRWleZe1Q==(String), eFRMOOMwvpz9mjF197vwCg==(String), jidong(String), N(String)
+38452 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.insertAdminSrchEqupmnt - <==    Updates: 1
+54291 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchEqupmntInfoAllList
+54319 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectAdminSrchEqupmntInfoList - ==>  Preparing: SELECT * FROM bd_srch_equpmnt_info ORDER BY srch_equpmnt_id DESC 
+54319 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectAdminSrchEqupmntInfoList - ==> Parameters: 
+54322 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectAdminSrchEqupmntInfoList - <==      Total: 3
+966  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 11348 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+968  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+968  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6169 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.774 seconds (JVM running for 6.636)
+888  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 13120 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+891  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+893  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6048 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.689 seconds (JVM running for 6.519)
+614  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11400 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+618  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+619  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6567 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.424 seconds (JVM running for 7.05)
+10772 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+10851 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+11118 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+11119 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+36874 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/adminSrchEqupmntRegist
+37250 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectMaxEqupmntId - ==>  Preparing: SELECT max(srch_equpmnt_id) FROM bd_srch_equpmnt_info 
+37267 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectMaxEqupmntId - ==> Parameters: 
+37278 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectMaxEqupmntId - <==      Total: 1
+37284 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.insertAdminSrchEqupmnt - ==>  Preparing: INSERT INTO bd_srch_equpmnt_info( srch_equpmnt_id, srch_equpmnt_identi_no, srch_equpmnt_kind, user_nm, user_id, cre_dt, use_yn) VALUES( ?, ?, ?, ?, ?, now(), ?) 
+37286 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.insertAdminSrchEqupmnt - ==> Parameters: EqupmntID_000006(String), y/N/2JlwN2s7RzNOyszG1g==(String), h8HeRLmIgKM9IkrI0tOQUw==(String), HZPani4/r8ODk/Ix9YeUBw==(String), gingdong(String), N(String)
+37359 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.insertAdminSrchEqupmnt - <==    Updates: 1
+44203 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchEqupmntInfoAllList
+44231 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectAdminSrchEqupmntInfoList - ==>  Preparing: SELECT * FROM bd_srch_equpmnt_info ORDER BY srch_equpmnt_id DESC 
+44231 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectAdminSrchEqupmntInfoList - ==> Parameters: 
+44235 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectAdminSrchEqupmntInfoList - <==      Total: 4
+52467 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminAllLogSrchInfoList
+52468 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectAdminAllLogSrchInfoList - ==>  Preparing: SELECT log_id, FN_COM_CODE_CONVERT_NAME('COM001', log_gb) AS log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id FROM bd_log_info ORDER BY log_id DESC 
+52469 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectAdminAllLogSrchInfoList - ==> Parameters: 
+52584 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectAdminAllLogSrchInfoList - <==      Total: 7
+72186 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchUserInfoList
+72189 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - ==>  Preparing: SELECT * FROM bd_user_info WHERE 1=1 ORDER BY user_reg_dt DESC, user_appve_yn DESC 
+72189 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - ==> Parameters: 
+72191 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - <==      Total: 2
+79378 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchUserInfoList
+79380 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - ==>  Preparing: SELECT * FROM bd_user_info WHERE 1=1 ORDER BY user_reg_dt DESC, user_appve_yn DESC 
+79381 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - ==> Parameters: 
+79382 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - <==      Total: 2
+879  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 13036 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+881  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+885  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6535 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.139 seconds (JVM running for 7.263)

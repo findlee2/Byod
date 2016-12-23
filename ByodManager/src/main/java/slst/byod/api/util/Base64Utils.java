@@ -1,38 +1,41 @@
 package slst.byod.api.util;
 
+import org.apache.commons.codec.binary.Base64;
+
 import sun.misc.*;
 
 public class Base64Utils {
 	// base64 인코딩
-	  public  String base64Encoding(String value)
+	public  String base64Encoding(String value)
 	  {
-	   String retVal = "";
+	   byte[] retVal = null;
 	   
 	   try
 	   {
 	    byte[] plainText = null; // 평문
 	    plainText = value.getBytes();
 	   
-	    BASE64Encoder encoder = new BASE64Encoder();
+	    Base64 encoder = new Base64();
 	    retVal = encoder.encode(plainText);
 	   }catch(Exception e){
 	   
 	    e.printStackTrace();
 	   }
-	   return retVal;
+	   return retVal.toString();
 	  }
-	  //base64 디코딩
-	  public  String base64decoding(String encodedString)
+	
+	//base64 디코딩
+	public  String base64decoding(String encodedString)
 	  {
-	   String retVal = "";
+		String retVal = null;
 	  
 	   try
 	   {
 	    byte[] plainText = null; // 해쉬 값
-	    BASE64Decoder decoder = new BASE64Decoder();
-	    plainText = decoder.decodeBuffer (encodedString );
+	    Base64 decoder = new Base64();
+	    plainText = decoder.decode (encodedString );
 
-	    retVal =new String(plainText);
+	    retVal = new String(plainText);
 	   }catch(Exception e){
 	   
 	    e.printStackTrace();
@@ -40,8 +43,9 @@ public class Base64Utils {
 	   
 	   return retVal;
 	  }
-	  //Base64 + Seed 암호화 
-	  public String encrypt(String str, String key)
+	  
+	//Base64 + Seed 암호화 
+	public String encrypt(String str, String key)
 	  {
 	   if (key.length() != 24) {
 	    return "";
@@ -50,7 +54,7 @@ public class Base64Utils {
 	    String strResult;
 	    String strTemp = "";
 	    strResult = "";
-	    BASE64Encoder encoder = new BASE64Encoder();
+	    Base64 encoder = new Base64();
     
 	    SeedAlg seedAlg = new SeedAlg(key.getBytes());    
 	    strTemp = new String(encoder.encode(seedAlg.encrypt(str.getBytes("UTF-8"))));
@@ -66,8 +70,8 @@ public class Base64Utils {
 	   }
 	  }
 	  
-	  //Base64 + Seed 복호화
-	  public String decrypt(String str, String key) {
+	//Base64 + Seed 복호화
+	public String decrypt(String str, String key) {
 	   if (key.length() != 24) {
 	    return "";
 	   }
@@ -75,9 +79,9 @@ public class Base64Utils {
 	    String strResult;
 	    String strTemp = "";
 	    strResult = "";
-	    BASE64Decoder decoder = new BASE64Decoder();
+	    Base64 decoder = new Base64();
 	    SeedAlg seedAlg = new SeedAlg(key.getBytes());
-	    strTemp = new String(seedAlg.decrypt(decoder.decodeBuffer(str)),"UTF-8");
+	    strTemp = new String(seedAlg.decrypt(decoder.decode(str)),"UTF-8");
 	    for (int i = 0; i < strTemp.length() && strTemp.charAt(i) != 0;) {
 	     if (strTemp.charAt(i) != '\n' && strTemp.charAt(i) != '\r') {
 	      strResult = strResult + strTemp.charAt(i);
