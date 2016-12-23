@@ -24,7 +24,7 @@
 			   dispose_user_nm,
 			   dispose_user_id
 		  FROM bd_log_info
-	  ORDER BY log_id DESC;   		
+	  ORDER BY log_id DESC		
    </select>
    
    <!-- 조사업무 등록 로그 생성(관리자용) -->
