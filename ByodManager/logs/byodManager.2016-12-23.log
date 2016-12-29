@@ -66,3 +66,224 @@
 881  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
 885  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
 6535 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.139 seconds (JVM running for 7.263)
+851  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 5388 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+854  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+857  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5852 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.491 seconds (JVM running for 6.337)
+977  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 10824 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+979  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+979  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6970 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.58 seconds (JVM running for 7.473)
+1026 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9376 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1027 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1028 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6503 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.03 seconds (JVM running for 7.067)
+888  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 13036 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+891  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+893  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6106 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.734 seconds (JVM running for 6.604)
+619  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 528 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+623  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+624  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6673 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.519 seconds (JVM running for 7.163)
+37204 [http-nio-8007-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+46584 [http-nio-8007-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+67685 [http-nio-8007-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+70597 [http-nio-8007-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+88041 [http-nio-8007-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+906  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 11940 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+909  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+911  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6415 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.04 seconds (JVM running for 6.904)
+952  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 5900 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+954  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+954  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5894 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.51 seconds (JVM running for 6.411)
+920  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 6412 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+923  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+924  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6213 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.81 seconds (JVM running for 6.7)
+614  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 12296 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+618  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+619  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6167 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.008 seconds (JVM running for 6.658)
+21015 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+21083 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+21357 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+21357 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+44987 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+45000 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+45184 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+45184 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+59851 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+60175 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+60194 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+60203 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+60205 [http-nio-8080-exec-5] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+60207 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+60208 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+60211 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+60211 [http-nio-8080-exec-5] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000007
+60212 [http-nio-8080-exec-5] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000008
+60212 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+60214 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000008(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+60291 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+60291 [http-nio-8080-exec-5] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+114314 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/adminRegistBusiness
+114322 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.insertRegistBusiness - ==>  Preparing: INSERT INTO bd_srch_info( report_no, user_id, business_nm, object_place_nm, object_relation_user, object_relation_user_home_tel, object_relation_user_mobil_tel, object_location, object_use, object_buil_struc, check_period_start, check_period_end, check_user_nm, check_user_qualfication_class, check_user_qualfication_no, submit_dt, head_fire_depart, location_lat, location_lon, report_cre_dt, report_stats) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), default) 
+114326 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.insertRegistBusiness - ==> Parameters: SL_ResultReport_000002(String), ahnsu234(String), 29cDhJDHnNxtlMEmOuaUrA==(String), 29cDhJDHnNxtlMEmOuaUrA==(String), test(String), null, null, 29cDhJDHnNxtlMEmOuaUrA==(String), 29cDhJDHnNxtlMEmOuaUrA==(String), 29cDhJDHnNxtlMEmOuaUrA==(String), 20161212(String), 20161212(String), 29cDhJDHnNxtlMEmOuaUrA==(String), test(String), test(String), null, test(String), 127.392783(String), 36.428079(String)
+114383 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.insertRegistBusiness - <==    Updates: 1
+114383 [http-nio-8080-exec-10] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+114384 [http-nio-8080-exec-10] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+114385 [http-nio-8080-exec-10] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+114386 [http-nio-8080-exec-10] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000008
+114386 [http-nio-8080-exec-10] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000009
+114387 [http-nio-8080-exec-10] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+114388 [http-nio-8080-exec-10] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000009(String), 3(String), SL_ResultReport_000002(String), 29cDhJDHnNxtlMEmOuaUrA==(String), ahnsu234(String), 29cDhJDHnNxtlMEmOuaUrA==(String), null, 1(String), null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+114439 [http-nio-8080-exec-10] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+114439 [http-nio-8080-exec-10] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+173516 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+173520 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+173521 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+173687 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+173687 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+173688 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+173689 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+173690 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+330731 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+330735 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+330735 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+330772 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+330772 [http-nio-8080-exec-4] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+330772 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+330773 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+330773 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+442000 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginOut
+442002 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+442002 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+442003 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+442003 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000009
+442003 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000010
+442004 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+442005 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000010(String), 2(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+442119 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+442120 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+485547 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userMLoginInfo
+485551 [http-nio-8080-exec-7] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? AND user_otg_no = ? 
+485552 [http-nio-8080-exec-7] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: ahnsu234(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String), BYOD-00000001(String)
+485553 [http-nio-8080-exec-7] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+485554 [http-nio-8080-exec-7] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+485554 [http-nio-8080-exec-7] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+485555 [http-nio-8080-exec-7] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+485556 [http-nio-8080-exec-7] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+485556 [http-nio-8080-exec-7] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000010
+485556 [http-nio-8080-exec-7] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000011
+486331 [http-nio-8080-exec-7] INFO  slst.byod.api.util.ByodApiUtil - Output from Server .... 
+486331 [http-nio-8080-exec-7] INFO  slst.byod.api.util.ByodApiUtil - 접속위치 : [대전광역시 유성구 테크노1로 62-16]
+486333 [http-nio-8080-exec-7] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+486334 [http-nio-8080-exec-7] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000011(String), 1(String), null, null, null, null, null, null, 3g(String), ogOwLWtkqf72eGtQg3E+jaqN7p1B/vWiAi23jhn4Da4RGEskUsVRL756A1/jLrxx(String), Qy2mYcJdcHwm+mUZ8MIC6w==(String), ahnsu234(String)
+486376 [http-nio-8080-exec-7] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+486377 [http-nio-8080-exec-7] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+500850 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+500853 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+500854 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+500855 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+500855 [http-nio-8080-exec-5] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+500856 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+500856 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+500857 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+540951 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+540953 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+540954 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+540955 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+540955 [http-nio-8080-exec-8] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+540955 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+540955 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+540956 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+553262 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+553264 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+553265 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+553266 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+553266 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+553266 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+553266 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+553267 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+621149 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishInfoFList
+621153 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishInfoList - ==>  Preparing: SELECT report_no, business_nm FROM bd_srch_info WHERE user_id = ? AND report_stats = '2' ORDER BY report_no ASC, report_cre_dt DESC 
+621154 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishInfoList - ==> Parameters: ahnsu234(String)
+621163 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishInfoList - <==      Total: 1
+606  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 9448 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+609  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+611  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5983 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.829 seconds (JVM running for 6.49)
+15827 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+16235 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+16253 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+16255 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+16256 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+16258 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+16258 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+16267 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+729  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11880 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+735  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+736  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6150 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.958 seconds (JVM running for 6.674)
+8693 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+9028 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+9048 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+9050 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+9051 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+9053 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+9054 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+9064 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+9065 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - 11111111111111
+9065 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - 2222222222222222222222
+699  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11672 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+704  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+705  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+7015 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.837 seconds (JVM running for 9.08)
+14451 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+23757 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+23962 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+23965 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+25422 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+28181 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+28187 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+28357 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+56043 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - 11111111111111
+60435 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - 2222222222222222222222
+92481 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+95917 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+95921 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+95925 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+96072 [http-nio-8080-exec-2] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+96641 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+96649 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+96664 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+97391 [http-nio-8080-exec-2] INFO  s.b.a.s.SrchManageController - 11111111111111
+98821 [http-nio-8080-exec-2] INFO  s.b.a.s.SrchManageController - 2222222222222222222222
+718  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 3760 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+726  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+727  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+7211 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 7.022 seconds (JVM running for 7.792)
+715  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 1268 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+719  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+719  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+7488 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 7.316 seconds (JVM running for 8.054)
+8208 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+13392 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+13600 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+13603 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+14238 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+14814 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+14817 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+14989 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+28731 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment ]: fail!!!!!
+866  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 600 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+868  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+868  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5998 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.636 seconds (JVM running for 6.475)
+962  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9868 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+981  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+982  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6142 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.772 seconds (JVM running for 6.639)

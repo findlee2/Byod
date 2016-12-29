@@ -1,5 +1,8 @@
 package slst.byod.api.util;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -9,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.codec.binary.Base64;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -152,4 +156,56 @@ public class ByodApiUtil {
         }
         return false;
     }
+	
+	/**
+	 * 이미지,오디오 파일을 Base64 encoding 된 바이너리 파일로 리턴
+	 * @param url
+	 * @return
+	 * @throws IOException
+	 */
+	public static String encodeBase64Convert(String url) throws IOException {
+		
+		String outputPath    = "";
+		String encodedString = "";
+		outputPath           = url;
+		
+		
+		File f = new File(outputPath);
+		if(f.exists()){
+			FileInputStream fis=new FileInputStream(f);
+			ByteArrayOutputStream bos=new ByteArrayOutputStream();
+			int b;
+			byte[] buffer = new byte[1024];
+			while((b=fis.read(buffer))!=-1){
+				bos.write(buffer,0,b);
+			}
+			byte[] fileBytes=bos.toByteArray();
+			fis.close();
+			bos.close();
+			
+			byte[] encoded=Base64.encodeBase64(fileBytes);
+			encodedString = new String(encoded);
+			
+		}
+		return encodedString;
+	}
+	
+	/**
+	 * 확장자 체크
+	 * @param ext
+	 * @return
+	 */
+	public static boolean isValidFileExtension(String ext) {
+        
+        final String[] GOOD_EXTENSION = {"mp3", "jpg"}; //향후 확장을 고려하여 배열로 세팅
+        
+        int len = GOOD_EXTENSION.length;
+        
+        for (int i = 0; i < len; i++) {
+            if (ext.equalsIgnoreCase(GOOD_EXTENSION[i])) {
+                return true;
+            }
+        }
+        return false;
+	}
 }

@@ -1,0 +1,846 @@
+664  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11112 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+668  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+669  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+8761 [main] ERROR o.a.coyote.http11.Http11NioProtocol - Failed to start end point associated with ProtocolHandler [http-nio-10.0.6.122-8080]
+java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:23)
+8763 [main] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:23)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:976)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	... 14 common frames omitted
+8889 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+588  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 2188 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+592  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+592  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5598 [main] ERROR o.a.coyote.http11.Http11NioProtocol - Failed to start end point associated with ProtocolHandler [http-nio-10.0.6.122-8007]
+java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:23)
+5599 [main] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-8007]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8007]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:23)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:976)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	... 14 common frames omitted
+5705 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8007 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8007, or configure this application to listen on another port.
+
+592  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 10392 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+596  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+597  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5290 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.142 seconds (JVM running for 5.796)
+109974 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+110320 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+110339 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+110369 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+110370 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+110372 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+110372 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+110382 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+110388 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+110388 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+110390 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+110396 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+110397 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), ablCEtPWAy6UpqL2qPqACuP3O4fbSOL7.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+110480 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+110480 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+110482 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+110483 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+110484 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+110485 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+110486 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000004(String), SL_ResultReport_000002(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), 63od8dUxreuZ3oBKncGzcDSxtMalv0zl.jpg(String), 9jQeYjGoaHpAbm2kjGyt8A==(String), jpg(String)
+110614 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+110615 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+133947 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+134005 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+134026 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+134086 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+134326 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+134327 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+175152 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+175157 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+175158 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+175160 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+175163 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+175168 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+175173 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+616  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 9004 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+619  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+620  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5622 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.465 seconds (JVM running for 6.144)
+16048 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+22351 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+22635 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+22655 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+22667 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+22694 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+22695 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+22698 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+34556 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+128909 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+134572 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+134574 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+134574 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+134575 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+134576 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+134577 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+134579 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+153379 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+154569 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+154571 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+154572 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+154572 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+154573 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+154573 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+154575 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+179336 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+180973 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+180974 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+180975 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+180975 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+180976 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+180977 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+180979 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+191559 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+193232 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+193233 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+193234 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+193234 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+193235 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+193235 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+193237 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+199438 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+200702 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+201450 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+201452 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+201452 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+201453 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+201454 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+201454 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+201456 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+405092 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+405094 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+405095 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+405096 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+405096 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+405097 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+405098 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+413746 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+413747 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+413748 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+413749 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+413750 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+413751 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+413753 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+414521 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+414522 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+414523 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+414524 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+414524 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+414525 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+414526 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+415039 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+415040 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+415040 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+415041 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+415041 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+415042 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+415044 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+415554 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+415555 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+415555 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+415556 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+415557 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+415557 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+415559 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+416043 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+416044 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+416045 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+416045 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+416046 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+416046 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+416048 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+624  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 9072 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+628  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+628  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5651 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.493 seconds (JVM running for 6.201)
+44809 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+45119 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+45137 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+45170 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+45172 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+45174 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+45174 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+45182 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+45188 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+45189 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+45190 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+45195 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+45197 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), 1l4OBo3V9E2PnGXP9Bbt7hi7tkATN3hL.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+45214 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+45215 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+45217 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+45217 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+45218 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+45218 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+45220 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000004(String), SL_ResultReport_000002(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), I3qjLhkFzpddOhVfGXRinFDcc90bg9ls.jpg(String), 9jQeYjGoaHpAbm2kjGyt8A==(String), jpg(String)
+45237 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+45238 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+56833 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+61096 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+62852 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+62857 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+62857 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+62858 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+62861 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+62861 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+62865 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+79890 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+80876 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+80878 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+80879 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+80879 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+80880 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+80880 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+80883 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+98958 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+101069 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+101070 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+101071 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+101072 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+101073 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+101073 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+101075 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+134177 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+358159 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+366199 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+368951 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+368954 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+368955 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+368957 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+368958 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+368959 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+368963 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+392341 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+400804 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+400809 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+400811 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+400813 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+400817 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+400820 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+400827 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+423874 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+426093 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+426097 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+426099 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+426102 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+426104 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+426105 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+426111 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+8619741 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+8619760 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+8619761 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+8619767 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+8619770 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+8619770 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+8619773 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+13201732 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+13201744 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+13201789 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+13201829 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+13202073 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+13202073 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+647  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 8324 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+650  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+651  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6224 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.076 seconds (JVM running for 6.732)
+34344 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+34413 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+34703 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+34707 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+50673 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+50991 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+51008 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+51040 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+51041 [http-nio-8080-exec-6] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+51043 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+51043 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+51052 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+51057 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+51058 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+51059 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+51065 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+51066 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), Fm09QXVB2AxnjRYawO4VFUv3pWfYQyON.csv(String), vT0j6UnIpYRf1cq+FHup4g==(String), csv(String)
+51085 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+51086 [http-nio-8080-exec-6] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+51087 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+51088 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+51089 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+51090 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+51091 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000004(String), SL_ResultReport_000002(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), 0iroaMmsVsEc4ldvShnZiLAzT6FUHQjS.jpg(String), 9jQeYjGoaHpAbm2kjGyt8A==(String), jpg(String)
+51182 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+51182 [http-nio-8080-exec-6] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+631  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 12044 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+635  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+636  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6019 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.858 seconds (JVM running for 6.535)
+36605 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+36982 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+37000 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+37039 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+37040 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+37041 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+37042 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+37051 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+101296 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+101299 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+101300 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+101365 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+101366 [http-nio-8080-exec-2] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+101366 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+101366 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+101367 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+120393 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+120396 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+120397 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+120522 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+120523 [http-nio-8080-exec-3] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+120523 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+120523 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+120524 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+138087 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+138088 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+138089 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+138135 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+138136 [http-nio-8080-exec-4] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+138136 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+138137 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+138138 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+138142 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+138143 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+138144 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+138152 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+138154 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), iBBIJTSGoSdQMcuNMJMBEEGSelNn9IgV.jpg(String), 9jQeYjGoaHpAbm2kjGyt8A==(String), jpg(String)
+138234 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+138235 [http-nio-8080-exec-4] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+138235 [http-nio-8080-exec-4] INFO  s.b.a.s.SrchManageController - [rtn ----------------------- ]: true
+843433 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+632  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 6992 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+636  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+637  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5707 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.548 seconds (JVM running for 6.229)
+24637 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+25442 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+25829 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+25851 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+25862 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+25890 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+25891 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+25899 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+30538 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+30624 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+30625 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+30625 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+30626 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+30627 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+30628 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+30630 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+66577 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+66857 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+66859 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+66859 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+66860 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+66861 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+66862 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+66864 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+110425 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+110645 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+110647 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+110647 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+110648 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+110649 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+110650 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+110652 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+112540 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+112575 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+112576 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+112577 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+112578 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+112579 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+112579 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+112582 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+113487 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+113523 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+113524 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+113524 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+113525 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+113526 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+113527 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+113529 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+114912 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+114952 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+114953 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+114954 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+114955 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+114956 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+114956 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+114958 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+145154 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+145161 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+145162 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+145235 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+145236 [http-nio-8080-exec-8] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+145237 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+145237 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+145238 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+145244 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+145244 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+145246 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+145247 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+145248 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), fh3ZvMgLS13LO7jYKB05VipKBdCT3dAr.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+145268 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+145268 [http-nio-8080-exec-8] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+156885 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+156962 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+156964 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+156964 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+156965 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+156966 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+156967 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+156968 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+162533 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+162576 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+162578 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+162579 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+162579 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+162580 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+162581 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+162583 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+164535 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+164585 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+164586 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+164588 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+164589 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+164589 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+164590 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+164592 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+176317 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+176384 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+176385 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+176386 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+176387 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+176389 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+176389 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+176391 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+206163 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+206248 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+206250 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+206250 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+206251 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+206252 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+206253 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+206255 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+209651 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+209734 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+209736 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+209736 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+209737 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+209738 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+209739 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+209741 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+210772 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+210848 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+210849 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+210850 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+210851 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+210853 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+210853 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+210855 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+238830 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+239069 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+239070 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+239071 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+239072 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+239073 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+239073 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+239075 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+278332 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+278334 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+278335 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+278412 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+278413 [http-nio-8080-exec-2] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+278414 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+278414 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+278416 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+278420 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+278421 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+278422 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+278423 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+278424 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), nkWyphbubtCqxe35o0Gsl1l2AeQptLuv.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+278468 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+278468 [http-nio-8080-exec-2] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+294787 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+294878 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+294881 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+294881 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+294882 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+294882 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+294883 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+294888 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+747  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 10320 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+752  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+752  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+9802 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 9.61 seconds (JVM running for 12.078)
+194582 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+194928 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+194948 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+194985 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+194986 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+194988 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+194988 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+194999 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+310735 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+310738 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+310756 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+314754 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+314756 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), xjgHqCPbDdbsqv4UCUx7qKD2goSEequO.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+314828 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+314829 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile]: success!!
+331562 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+332358 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+332364 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+332365 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+332366 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+332370 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+332371 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+332379 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+347438 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+347699 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+347701 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+347703 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+347704 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+347705 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+347706 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+347709 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+373220 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+373480 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+373481 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+373482 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+373483 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+373484 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+373485 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+373488 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+391360 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+391693 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+391695 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+391695 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+391696 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+391697 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+391697 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+391699 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+394343 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+394419 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+394420 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+394420 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+394421 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+394422 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+394422 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+394424 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+396494 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+396575 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+396577 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+396577 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+396578 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+396579 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+396580 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+396582 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+398515 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+399294 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+399295 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+399296 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+399297 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+399298 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+399299 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+399301 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+400398 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+400531 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+400532 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+400533 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+400534 [http-nio-8080-exec-7] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+400534 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+400535 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+400536 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+403426 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+403614 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+403617 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+403617 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+403618 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+403619 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+403619 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+403621 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+405583 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+406404 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+406405 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+406406 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+406406 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+406407 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+406408 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+406409 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+407395 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+408066 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+408068 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+408068 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+408069 [http-nio-8080-exec-10] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+408070 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+408070 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+408072 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+409090 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+409190 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+409191 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+409191 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+409192 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+409193 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+409194 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+409196 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+431028 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+431277 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+431278 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+431278 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+431279 [http-nio-8080-exec-4] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+431280 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+431280 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+431282 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+439424 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+439510 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+439512 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+439513 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+439513 [http-nio-8080-exec-6] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+439514 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+439514 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+439516 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+616  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 12260 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+620  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+621  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6112 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.957 seconds (JVM running for 6.641)
+30550 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+30848 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+30867 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+30903 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+30904 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+30906 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+30906 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+30915 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+30921 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+30921 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+30922 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+30928 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+30929 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), vfcGswLXsnnmkPhrZQyqPg83frgmXGDd.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+30950 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+30950 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile 1. 비투비-01-NEW MEN.mp3]: success!!
+30952 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+30952 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+30953 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+30954 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+30955 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000004(String), SL_ResultReport_000002(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), NO1uGlUhPwo6VsCr6jpQJhad02pH40gZ.jpg(String), 9jQeYjGoaHpAbm2kjGyt8A==(String), jpg(String)
+30984 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+30984 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile question.jpg]: success!!
+37233 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+37965 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+37970 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+37971 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+37972 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+37973 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+37974 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+37978 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+74280 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+74283 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+74283 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+74334 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+74335 [http-nio-8080-exec-5] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+74335 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+74336 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+74336 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+74338 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+74339 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+74339 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+74340 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+74341 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), QqvDHPk8SngP28hohTAqsEzabPuJYYby.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+74388 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+74388 [http-nio-8080-exec-5] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile 1. 비투비-01-NEW MEN.mp3]: success!!
+85459 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+85569 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+85577 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+85578 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+85579 [http-nio-8080-exec-8] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+85580 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+85581 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+85583 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+128860 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+128948 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+128950 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+128950 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+128951 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+128952 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+128953 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+128955 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+153363 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+153366 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+153367 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+153437 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+153437 [http-nio-8080-exec-5] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+153437 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+153438 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+153438 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+153440 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+153441 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+153441 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+153442 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+153442 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000003(String), SL_ResultReport_000002(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), Ng7XgTIl0lnjJhtEsxSm299O1AMIHScc.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+153492 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+153494 [http-nio-8080-exec-5] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile 1. 비투비-01-NEW MEN.mp3]: success!!
+153500 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+153501 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+153503 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+153505 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+153506 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000004(String), SL_ResultReport_000002(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), 9ZQIMQ0xih04uenapUnEZpCVbOoJs4JJ.jpg(String), 9jQeYjGoaHpAbm2kjGyt8A==(String), jpg(String)
+153526 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+153527 [http-nio-8080-exec-5] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile question.jpg]: success!!
+158227 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+158309 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+158310 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+158311 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+158312 [http-nio-8080-exec-9] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+158313 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+158313 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+158317 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+263831 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+263913 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishDetailInfo
+263915 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+263915 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+263916 [http-nio-8080-exec-5] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+263917 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==>  Preparing: SELECT a.*, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm, (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm FROM bd_srch_info a, bd_attch_file_info b WHERE a.report_no = ? AND a.user_id = b.user_id AND a.report_no = b.report_no AND report_stats = '2' GROUP BY a.report_no 
+263918 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - ==> Parameters: SL_ResultReport_000002(String)
+263919 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectSrchFinishDetailInfo - <==      Total: 1
+1081 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 10844 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1083 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1083 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6525 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.103 seconds (JVM running for 7.062)

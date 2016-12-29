@@ -45,6 +45,13 @@ public class SrchManageController extends LogManageUtilParsingController{
 	@Value("${Globals.RoundKey}")
 	private String RoundKey;
 	
+	@Value("${server.address}")
+	private String sAddress;
+	
+	@Value("${server.port}")
+	private String sPort;
+	
+	
 	private static String fileStorePath;
 	
 	@Value("${fileStorePath}")
@@ -615,17 +622,20 @@ public class SrchManageController extends LogManageUtilParsingController{
 			
 			cnt = attchManageMapper.selectReportAndFileCnt(reportNo);
 			
-			if(cnt + sourceFile.length > 2){
-				//첨부파일 갯수 2개로 제한
-				log.info("[selectReportAndFileCnt method] : Attachment file Exceeded!!!");
-				return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+			if(sourceFile.length > 0){
 				
-			}else{
-				
-				//insert 첨부파일
-				uploadAttachment(reportNo, userId, sourceFile);
+				if(cnt + sourceFile.length > 2){
+					//첨부파일 갯수 2개로 제한
+					log.info("[selectReportAndFileCnt method] : Attachment file Exceeded!!!");
+					return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+				}else{
+					//insert 첨부파일
+					if(!uploadAttachment(reportNo, userId, sourceFile)){
+						return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);						
+					}
+				}
 			}
-			
+			 
 			//로그생성
 			UserManageVO UserVO = (UserManageVO)request.getSession().getAttribute("userVO");
 			
@@ -671,62 +681,67 @@ public class SrchManageController extends LogManageUtilParsingController{
 	 * @param sourceFile
 	 * @throws Exception
 	 */
-	public void uploadAttachment(String reportNo, String userId, MultipartFile[] sourceFile) throws Exception {
+	public boolean uploadAttachment(String reportNo, String userId, MultipartFile[] sourceFile) throws Exception {
 
 		AttchFileManageVO attchVO = new AttchFileManageVO();
 		String tmpResultID        = "";
 		String extensionGb        = "";
 		
 		try{
-			
-			if(sourceFile.length > 0){
 				
-				String sourceFileName = "";
-				String sourceFileNameExtension = "";
-				//mp3,jpg
-				for(int i=0; i<sourceFile.length; i++){
-					
-					sourceFileName = sourceFile[i].getOriginalFilename();
-					sourceFileNameExtension = FilenameUtils.getExtension(sourceFileName).toLowerCase();
-					
-					if(sourceFileNameExtension.equals("mp3")){
-						extensionGb = "1";
-					}else{
-						extensionGb = "2";
-					}
-					
-					File destinationFile;
-					String destinationFileName;
-					do {
-						destinationFileName = RandomStringUtils.randomAlphanumeric(32) + "." + sourceFileNameExtension;
-						destinationFile = new File(fileStorePath + destinationFileName);
-					} while (destinationFile.exists());
-					destinationFile.getParentFile().mkdirs();
-					sourceFile[i].transferTo(destinationFile);
-					
-					//첨부파일 아이디 조회
-					tmpResultID = attchManageMapper.selectMaxFileId();
-					
-					attchVO.setFile_id(ByodApiUtil.numberParsing("4", tmpResultID));
-					attchVO.setReport_no(reportNo);
-					attchVO.setUser_id(userId);
-					attchVO.setAttch_file_kind(extensionGb);
-					attchVO.setAttch_file_path(base64.encrypt(fileStorePath, RoundKey));
-					attchVO.setAttch_file_nm(destinationFileName);
-					attchVO.setOri_file_nm(base64.encrypt(sourceFile[i].getOriginalFilename(), RoundKey));
-					attchVO.setAttch_file_extsn(sourceFileNameExtension);
-					
-					//첨부파일 정보 테이블에 insert
-					attchManageMapper.insertAttchFile(attchVO);
-					log.info("[uploadAttachment method - sourceFile]: success!!");
+			String sourceFileName = "";
+			String sourceFileNameExtension = "";
+
+			//mp3,jpg
+			for(int i=0; i<sourceFile.length; i++){
+				
+				sourceFileName = sourceFile[i].getOriginalFilename();
+				sourceFileNameExtension = FilenameUtils.getExtension(sourceFileName).toLowerCase();
+				
+				if(!ByodApiUtil.isValidFileExtension(sourceFileNameExtension)){
+					return false;
 				}
 				
-			}else{
-				log.info("[uploadAttachment method - sourceFile]: null");
+				if(sourceFileNameExtension.equals("mp3")){
+					extensionGb = "1";
+				}else{
+					extensionGb = "2";
+				}
+				File destinationFile;
+				String destinationFileName;
+				
+				do {
+					destinationFileName = RandomStringUtils.randomAlphanumeric(32) + "." + sourceFileNameExtension;
+					destinationFile = new File(fileStorePath + destinationFileName);
+
+				} while (destinationFile.exists());
+				destinationFile.getParentFile().mkdirs();
+				sourceFile[i].transferTo(destinationFile);
+				
+				//첨부파일 아이디 조회
+				tmpResultID = attchManageMapper.selectMaxFileId();
+				
+				attchVO.setFile_id(ByodApiUtil.numberParsing("4", tmpResultID));
+				attchVO.setReport_no(reportNo);
+				attchVO.setUser_id(userId);
+				attchVO.setAttch_file_kind(extensionGb);
+				attchVO.setAttch_file_path(base64.encrypt(fileStorePath, RoundKey));
+				attchVO.setAttch_file_nm(destinationFileName);
+				attchVO.setOri_file_nm(base64.encrypt(sourceFile[i].getOriginalFilename(), RoundKey));
+				attchVO.setAttch_file_extsn(sourceFileNameExtension);
+				
+				//첨부파일 정보 테이블에 insert
+				attchManageMapper.insertAttchFile(attchVO);
+				log.info("[uploadAttachment method - sourceFile "+sourceFile[i].getOriginalFilename() +"]: success!!");
 			}
+				
 		}catch(Exception e){
 			e.getStackTrace();
+			log.info("[uploadAttachment ]: fail!!!!!");
+			return false;
 		}
+		
+		return true;
 	}
 	
 	/**
@@ -752,7 +767,6 @@ public class SrchManageController extends LogManageUtilParsingController{
 		for(int i=0; i<responseBody.size(); i++){
 			responseBody.get(i).setBusiness_nm(base64.decrypt(responseBody.get(i).getBusiness_nm(), RoundKey));
 		}
-		
 		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
@@ -800,16 +814,18 @@ public class SrchManageController extends LogManageUtilParsingController{
 		if(cnt > 0){
 			responseBody.setAttch_file_cnt(cnt);
 		}
-		//첨부된 이미지 체크
+		//첨부된 이미지 체크(base64 data로 세팅)
 		if(!ByodApiUtil.isEmpty(responseBody.getImg_attch_file_nm())){
-			responseBody.setImg_attch_file_url(fileStorePath + responseBody.getImg_attch_file_nm());			
+			responseBody.setImg_attch_file_url("data:image/jpeg;base64,"+ ByodApiUtil.encodeBase64Convert(fileStorePath + responseBody.getImg_attch_file_nm()));			
 		}
 		
-		//첨부된 오디오 체크
+		//첨부된 오디오 체크(base64 data로 세팅)
 		if(!ByodApiUtil.isEmpty(responseBody.getAudio_attch_file_nm())){			
-			responseBody.setAudio_attch_file_url(fileStorePath + responseBody.getAudio_attch_file_nm());
+			responseBody.setAudio_attch_file_url("data:audio/wav;base64," + ByodApiUtil.encodeBase64Convert(fileStorePath + responseBody.getAudio_attch_file_nm()));
 		}
 		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
+				
 	}
+	
 }

@@ -15,7 +15,7 @@
    		  WHERE report_no = #{report_no}
    </select>
    
-   <!-- POST /Byod/AdminSrchEqupmntRegist 조사장비 등록(관리자용) -->
+   <!-- POST /Byod/srchUserReportUpload 보고서(조사업무) 업로드 (조사자용) -->
    <insert id="insertAttchFile" parameterType="AttchFileManageVO">
     	INSERT INTO bd_attch_file_info(
     				file_id,

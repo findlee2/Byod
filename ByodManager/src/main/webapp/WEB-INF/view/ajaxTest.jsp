@@ -2,10 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
 <title>ajaxTest</title>
 <script src="/webjars/jquery/2.2.1/jquery.min.js"></script> 
 <script type="text/javascript">
@@ -51,7 +52,7 @@ function uploadForm(){
 	var networkPath = "3g";
 	var locationLat = "36.428079";
 	var locationLon = "127.392783";
-	var	sourceFile = []		
+	var	sourceFile = [];		
 	
 	var vParam = "reportNo="+ reportNo
 				+"&userId="+ userId
@@ -84,8 +85,44 @@ function uploadForm(){
 	  });
 }
  
+$(function(){
+	  //$('#audioF').click(function(){
+		  //var url = '';
+		  
+		  $.ajax({
+			  type:"GET",
+			  url: '/Byod/srchFinishDetailInfo',
+			  
+			  data : "reportNo=SL_ResultReport_000002",
+			  //data: vParam,
+			  dataType	: "json",		  
+			  cache : false,
+	          //ContentType: "application/json",
+			  success: function(data) {
+				  //alert(data.audio_attch_file_url);
+				  //url = data.audio_attch_file_url;
+				  
+				  $("#demoAudio").attr('src',data.audio_attch_file_url);
+				  $("#demoImg").attr('src',data.img_attch_file_url);
+				  
+			  },
+			  error : function(request, status, error) {
+				    if (request.status != '0') {
+				     alert("code : " + request.status + "\r\nmessage : "
+				       + request.reponseText + "\r\nerror : " + error);
+				    }
+			  }
+		  });
+		  
+          //var url = "file:///C:/attachments/1.01-NEW%20MEN.mp3";    
+          //file:///C:/attachments/1.01-NEW%20MEN.mp3
+	    //});
+});
+	
+
 
 </script>
+
 </head>
 
 <body>
@@ -198,5 +235,17 @@ function uploadForm(){
 		</div> 
 	</div>
 </div>
+<div>
+===========================================================================================
+</div>
+<div id="audioF">첨부파일 오디오 테스트</div>
+<audio id='demoAudio' src="" controls></audio>
+
+
+ <div>
+===========================================================================================
+</div>
+<div>첨부파일 이미지 테스트</div>
+<img id="demoImg" alt="" src="">
 </body>
 </html>
