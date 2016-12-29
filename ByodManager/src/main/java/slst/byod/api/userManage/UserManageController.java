@@ -99,7 +99,7 @@ public class UserManageController extends LogManageUtilParsingController{
 		UserManageVO responseBody       = null;
 		
 		userVO.setUser_id(userId);
-		userVO.setUser_otg_no(userOtgNo);
+		userVO.setUser_otg_no(base64.decrypt(userOtgNo, RoundKey));
 		
 		//비밀번호 암호화(단방향 SHA-256)
 		userVO.setUser_pw(userPwAlgorithm.UserPwAlgorithm(userPw));
@@ -567,33 +567,29 @@ public class UserManageController extends LogManageUtilParsingController{
 			
 			reUserVO.setUser_nm(base64.decrypt(reUserVO.getUser_nm(), RoundKey));
 			
-			if(reUserVO !=null){
-				//기존 패스워드가 인증시 신규 비밀번호로 변경
-				userVO.setUser_pw(userPwAlgorithm.UserPwAlgorithm(userNewPw));
-				userManageMapper.updateSrchUserPassWord(userVO);
-				
-				/**
-				 * [로그생성]
-				 * [argument]
-				 * 구분 (NotNull)
-				      보고서 번호 
-				      업무명            
-				      보고서 담당자 아이디        
-				      보고서 담당자 이름                   
-				      최종 보고서 업로드 시간
-				      보고서 처리구분
-				      단말기 접속경로
-				      단말기위치 경도
-				      단말기위치 위도
-				      처리자 이름(NotNull)
-				      처리자 아이디(NotNull)
-				 */
-				adminInsertRegistBusinessLog("4",null,null,reUserVO.getUser_id(),reUserVO.getUser_nm(),null,null, null, 
-						null, null, reUserVO.getUser_nm(),reUserVO.getUser_id());
-				
-			}else{
-				return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
-			}
+			//기존 패스워드가 인증시 신규 비밀번호로 변경
+			userVO.setUser_pw(userPwAlgorithm.UserPwAlgorithm(userNewPw));
+			userManageMapper.updateSrchUserPassWord(userVO);
+			
+			/**
+			 * [로그생성]
+			 * [argument]
+			 * 구분 (NotNull)
+			      보고서 번호 
+			      업무명            
+			      보고서 담당자 아이디        
+			      보고서 담당자 이름                   
+			      최종 보고서 업로드 시간
+			      보고서 처리구분
+			      단말기 접속경로
+			      단말기위치 경도
+			      단말기위치 위도
+			      처리자 이름(NotNull)
+			      처리자 아이디(NotNull)
+			 */
+			adminInsertRegistBusinessLog("4",null,null,reUserVO.getUser_id(),reUserVO.getUser_nm(),null,null, null, 
+					null, null, reUserVO.getUser_nm(),reUserVO.getUser_id());
+			
 			
 		}catch(Exception e){
 			e.getStackTrace();			
@@ -726,5 +722,34 @@ public class UserManageController extends LogManageUtilParsingController{
 		return new ResponseEntity<Object>(reUserVO, HttpStatus.OK);
 	}
 
+	/**
+	 * OTG 암호화(관리자용)
+	 * @param userOtgNo
+	 * @return
+	 * @throws Exception
+	 */
+	@ApiOperation(value = "OTG 암호화(관리자용)", notes = "관리자가 OTG USB에 일련번호를 암호화하기 위한 API)")
+	@ApiImplicitParams({
+	    @ApiImplicitParam(name = "userOtgNo", value = "OTG 번호", required = true, dataType = "string", paramType = "query")
+	  })	
+	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
+	@RequestMapping(value = "/Byod/adminOTGEncrypt", method = RequestMethod.GET)	
+	public ResponseEntity<Object> adminOTGEncrypt(@RequestParam("userOtgNo") String userOtgNo) throws Exception {
+		
+		UserManageVO userVO = new UserManageVO();
+		
+		try{
+			
+			userVO.setUser_otg_no(base64.encrypt(userOtgNo, RoundKey));
+			
+		}catch(Exception e){
+			e.getStackTrace();
+			return new ResponseEntity<Object>(userVO, HttpStatus.BAD_REQUEST);
+		}
+		
+		return new ResponseEntity<Object>(userVO, HttpStatus.OK);
+	}
+	
+	
 }
 
