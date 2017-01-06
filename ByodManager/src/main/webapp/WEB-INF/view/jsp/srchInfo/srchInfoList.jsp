@@ -93,7 +93,11 @@ function onSuccess(data, status, xhr){
 		vHtml += "	<td>"+data[key].check_user_nm+"</td>";
 		vHtml += "	<td>"+data[key].user_id+"</td>";
 		vHtml += "	<td>"+data[key].check_period_start+"</td>";
-		vHtml += "	<td>"+data[key].report_stats+"</td>";
+		if(data[key].report_stats == '2'){
+			vHtml += "	<td>완료</td>";	
+		}else{
+			vHtml += "	<td>진행중</td>";
+		}
 		vHtml += "</tr>";
 		
 		vTotPageCnt = data[key].tot_cnt;
