@@ -3325,3 +3325,661 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION byod.FN_COM_
 18759 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
 18760 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
 18766 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+623  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 5592 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+628  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+628  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5444 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.279 seconds (JVM running for 5.951)
+16739 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+16756 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+17111 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+17112 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+20486 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+20792 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+20808 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+20817 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+20819 [http-nio-8080-exec-4] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+20821 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+20821 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+20824 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+20825 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000162
+20825 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000163
+20826 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+20827 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000163(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+20890 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+20892 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+20958 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+21261 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+21497 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+21502 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+21502 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+21508 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+24007 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+24011 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+24053 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+24057 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+24057 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+24066 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+63741 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+63755 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+63986 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+63988 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+63988 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+63992 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+65167 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+65174 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+65218 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+65219 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+65220 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+65224 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+66670 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+66673 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+66709 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+66710 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+66711 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+66715 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+67348 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+67350 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+67390 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+67391 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+67392 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+67395 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+68822 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+68832 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+68878 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+68879 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+68879 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+68882 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+69771 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+69773 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+69810 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+69811 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+69812 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+69815 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+107818 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+107830 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+108029 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+108031 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+108032 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+108034 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+109482 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+109489 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+109542 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+109543 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+109543 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+109546 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+110798 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+110802 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+110850 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+110851 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+110852 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+110854 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+111794 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+117981 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+117983 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+117983 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+117986 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+119706 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+119718 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+119757 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+119759 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+119760 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+119765 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+120708 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+120710 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+120746 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+120747 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+120747 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+120750 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+121633 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+121635 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+121668 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+121670 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+121670 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+121673 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+122474 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+122477 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+122520 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+122522 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+122523 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+122525 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+123285 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+123290 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+123345 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+123346 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+123346 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+123349 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+124127 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+124136 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+124173 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+124175 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+124175 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+124178 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+124928 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+124932 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+124986 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+124987 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+124987 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+124989 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+125699 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+125701 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+125739 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+125740 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+125741 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+125743 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+126540 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+126542 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+126576 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+126577 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+126577 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+126579 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+127362 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+127364 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+127404 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+127405 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+127405 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+127408 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+128096 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+128098 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+128142 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+128144 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+128144 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+128146 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+128868 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+128873 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+128921 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+128922 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+128922 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+128925 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+129629 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+129631 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+129664 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+129664 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+129665 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+129668 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+130483 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+130487 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+130525 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+130526 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+130526 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+130528 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+131313 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+131316 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+131363 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+131365 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+131366 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+131367 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+132029 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+132031 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+132064 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+132065 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+132066 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+132068 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+132832 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+132837 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+132895 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+132896 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+132897 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+132898 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+133620 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+133631 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+133678 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+133678 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+133679 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+133681 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+134436 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+134440 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+134485 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+134486 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+134487 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+134488 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+135505 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+135507 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+135541 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+135542 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+135542 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+135544 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+136386 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+136391 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+136446 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+136447 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+136448 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+136449 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+137256 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+137258 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+137289 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+137290 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+137290 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+137292 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+138064 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+138078 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+138126 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+138127 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+138128 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+138129 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+203803 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+203813 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+203977 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+203979 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+203979 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+203981 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+204801 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+206264 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+206266 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+206266 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+206268 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+208055 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+208072 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+208133 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+208134 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+208134 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+208136 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+209143 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+209146 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+209181 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+209183 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+209184 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+209186 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+211186 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+211190 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+211231 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+211233 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+211233 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+211234 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+212113 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+212128 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+212171 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+212171 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+212172 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+212173 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+213123 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+214345 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+214346 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+214347 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+214348 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+602  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11496 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+606  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+606  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5285 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.137 seconds (JVM running for 5.802)
+17761 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+17761 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+17778 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+17778 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+21465 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+21753 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+21771 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+21780 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+21782 [http-nio-8080-exec-3] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+21784 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+21784 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+21787 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+21787 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000163
+21788 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000164
+21788 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+21789 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000164(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+21863 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+21864 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+21919 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+22241 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+22431 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+22445 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+22446 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+22453 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+24806 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+24996 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+29016 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+32364 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+32374 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+33298 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+33300 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+34908 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+34914 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+34950 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+34952 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+34952 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+34961 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+39101 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+39108 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+582  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 12792 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+586  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+587  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5582 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.437 seconds (JVM running for 6.081)
+9238 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+9238 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+9261 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+9261 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+12521 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+12804 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+12820 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+12829 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+12830 [http-nio-8080-exec-3] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+12832 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+12832 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+12834 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+12835 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000164
+12835 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000165
+12836 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+12837 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000165(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+12882 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+12883 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+12920 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+13200 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+13442 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+13451 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+13452 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+13457 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+14358 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+14583 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+15543 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+15698 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+16817 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/logInfo/logInfoList
+16976 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/logInfo/logInfoList.jsp
+18246 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+20274 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+20284 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+20323 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+20325 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+20326 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+20334 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+22610 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+22612 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+22613 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 10(Integer)
+22622 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+23448 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+23450 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+23451 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 20(Integer)
+23453 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 1
+24881 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+24882 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+24883 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 10(Integer)
+24886 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+26241 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+26243 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+26244 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+26247 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+611  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 4872 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+615  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+615  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5540 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.385 seconds (JVM running for 6.048)
+8697 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8714 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+11781 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+12061 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+12077 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+12086 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+12087 [http-nio-8080-exec-2] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+12090 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+12090 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+12093 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+12093 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000165
+12094 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000166
+12094 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+12095 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000166(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+12132 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+12133 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+12172 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+12461 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+12654 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+12659 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+12661 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+12666 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+13558 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+13716 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+15357 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+15547 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+20312 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/logInfo/logInfoList
+20465 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/logInfo/logInfoList.jsp
+21318 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+21325 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+21955 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+21961 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+22881 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+29655 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+29663 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+30533 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+30539 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+31204 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/logInfo/logInfoList
+31211 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/logInfo/logInfoList.jsp
+605  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11548 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+609  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+610  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6035 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.888 seconds (JVM running for 6.539)
+8370 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8370 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8391 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+8391 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+11410 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+11696 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+11714 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+11722 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+11724 [http-nio-8080-exec-3] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+11726 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+11727 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+11730 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+11730 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000166
+11731 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000167
+11731 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+11732 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000167(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+11773 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+11774 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+11809 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+12065 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+12274 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+12282 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+12283 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+12309 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+25017 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+25020 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+25021 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 10(Integer)
+25029 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+26321 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+26322 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+26322 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 20(Integer)
+26326 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 1
+601  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 12672 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+605  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+605  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5848 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.7 seconds (JVM running for 6.359)
+11740 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+11758 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+12335 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+12336 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+15092 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+15366 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+15382 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+15391 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+15392 [http-nio-8080-exec-3] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+15394 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+15394 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+15396 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+15396 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000167
+15397 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000168
+15397 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+15398 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000168(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+15455 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+15456 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+15495 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+15908 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+16118 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+16122 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+16123 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+16129 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+23029 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+23040 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+23082 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+23084 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+23085 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+23094 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+24486 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+24655 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+26495 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+26662 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+27299 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/logInfo/logInfoList
+27440 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/logInfo/logInfoList.jsp
+28151 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+28159 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+28197 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+28199 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+28200 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+28204 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+30176 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+30178 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+30179 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 10(Integer)
+30182 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+30795 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+30796 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+30797 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 20(Integer)
+30799 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 1
+32802 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+32808 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+32845 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+32847 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+32848 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+32850 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+602  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11748 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+605  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+606  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5530 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.383 seconds (JVM running for 6.04)
+11501 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+11521 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+12107 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+12108 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+14753 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+15026 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+15044 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+15053 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+15055 [http-nio-8080-exec-3] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+15057 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+15058 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+15060 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+15061 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000168
+15061 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000169
+15062 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+15063 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000169(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+15107 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+15107 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+15154 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+15434 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+15634 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+15638 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+15639 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+15648 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+19725 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+19727 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+19728 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 10(Integer)
+19737 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+21468 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+21703 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+22602 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+22878 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+23858 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+23861 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+24986 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+24990 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+26041 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/logInfo/logInfoList
+26227 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/logInfo/logInfoList.jsp
+27268 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+27277 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+27324 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+27326 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+27327 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+27335 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+28844 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+28847 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+28901 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+28901 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+28902 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+28905 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+30465 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+30467 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+30468 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 10(Integer)
+30471 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+31012 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+31013 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+31014 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 20(Integer)
+31016 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 1
+32157 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+32163 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+32201 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+32201 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+32202 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+32204 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+33082 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+33084 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+33123 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+33124 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+33125 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+33127 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+53829 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+53837 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+56386 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+56389 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+56389 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+56390 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+56391 [http-nio-8080-exec-6] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+56391 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+56391 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+56392 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+56392 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000169
+56392 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000170
+56393 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+56394 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000170(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+56484 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+56484 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+56494 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+56501 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+56680 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+56681 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+56682 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+56684 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+58078 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+58086 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+58842 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+58848 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+59462 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/logInfo/logInfoList
+59468 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/logInfo/logInfoList.jsp
+60139 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+60141 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+60174 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+60177 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+60178 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+60182 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+60678 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+60683 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+60718 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+60718 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+60719 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+60721 [http-nio-8080-exec-5] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+61291 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+61292 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+61373 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+61373 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+61374 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+61377 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+61896 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+61899 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+61948 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+61949 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+61949 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+61951 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+62258 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+62265 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+62928 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+62933 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+63578 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/logInfo/logInfoList
+63583 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/logInfo/logInfoList.jsp
+63926 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchEqupmnt/srchEqupmntList
+63927 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchEqupmnt/srchEqupmntList.jsp
+64441 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/userInfo/userInfoList
+64442 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/userInfo/userInfoList.jsp
+64844 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+64852 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+64891 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+64892 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+64893 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+64899 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+65183 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+65184 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+65218 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+65220 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+65220 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+65222 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
