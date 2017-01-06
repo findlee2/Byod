@@ -1,2 +1,4 @@
-/slst/
+/application.properties
+/logger/
 /mybatis/
+/slst/
