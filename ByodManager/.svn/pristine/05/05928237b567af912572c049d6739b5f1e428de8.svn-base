@@ -31,7 +31,7 @@ $(document).ready(function(){
     $(".loginBtn").click(function(){
         loginAction();
     });
-	selectList(0); //초기조회 시
+	//selectList(0); //초기조회 시
 });
 
 var vPage           = 1; //클릭한 페이지 번호
@@ -87,17 +87,13 @@ function onSuccess(data, status, xhr){
 		}else{
 			vHtml += "	<td>"+eval(key+1)+"</td>"; 
 		}
-		vHtml += "	<td><a onclick=detailListView('"+data[key].report_no+"') style=cursor:pointer>"+data[key].report_no+"</a></td>";
+		vHtml += "	<td>"+data[key].report_no+"</td>";
 		vHtml += "	<td>"+data[key].business_nm+"</td>";
 		vHtml += "	<td>"+data[key].object_location+"</td>";
 		vHtml += "	<td>"+data[key].check_user_nm+"</td>";
 		vHtml += "	<td>"+data[key].user_id+"</td>";
 		vHtml += "	<td>"+data[key].check_period_start+"</td>";
-		if(data[key].report_stats == '2'){
-			vHtml += "	<td>완료</td>";	
-		}else{
-			vHtml += "	<td>진행중</td>";
-		}
+		vHtml += "	<td>"+data[key].report_stats+"</td>";
 		vHtml += "</tr>";
 		
 		vTotPageCnt = data[key].tot_cnt;
@@ -123,17 +119,13 @@ function onSuccess(data, status, xhr){
 		}
 	});
 }
-
-function detailListView(reportNo){
-	alert(reportNo);
-}
 </script>
 </head>
 <body>
 <div id="byod-wrap">
 	<c:import url="/cmm/byodManagerTopView"/>	
 	<div id="container">
-		<h2>업무관리</h2>
+		<h2>로그관리</h2>
 		<div class="tb-function">
 			<div class="tb-search">
 				<select>
@@ -141,10 +133,6 @@ function detailListView(reportNo){
 				</select>
 				<input type="text" placeholder="검색어를 입력하세요" />
 				<button>조회</button>
-			</div>
-			<div class="tb-confirm">
-				<button>승인</button>
-				<button>미승인</button>
 			</div>
 		</div>
 		<table class="tb-user-list" summary="사용자목록 테이블입니다.">

@@ -87,7 +87,7 @@ function onSuccess(data, status, xhr){
 		}else{
 			vHtml += "	<td>"+eval(key+1)+"</td>"; 
 		}
-		vHtml += "	<td><a onclick=detailListView('"+data[key].report_no+"') style=cursor:pointer>"+data[key].report_no+"</a></td>";
+		vHtml += "	<td>"+data[key].report_no+"</td>";
 		vHtml += "	<td>"+data[key].business_nm+"</td>";
 		vHtml += "	<td>"+data[key].object_location+"</td>";
 		vHtml += "	<td>"+data[key].check_user_nm+"</td>";
@@ -122,10 +122,6 @@ function onSuccess(data, status, xhr){
 			}
 		}
 	});
-}
-
-function detailListView(reportNo){
-	alert(reportNo);
 }
 </script>
 </head>
