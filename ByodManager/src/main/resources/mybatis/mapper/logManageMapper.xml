@@ -11,7 +11,7 @@
    <!-- GET /Byod/AdminAllLogSrchInfoList 로그 관리-조회(관리자용) -->
    <select id="selectAdminAllLogSrchInfoList" resultType="LogManageVO">
    		SELECT log_id,
-			   FN_COM_CODE_CONVERT_NAME('COM001', log_gb) AS log_gb,
+			   `byod.FN_COM_CODE_CONVERT_NAME`('COM001', log_gb) AS log_gb,
 			   report_no,
 			   business_nm,
 			   user_id,
