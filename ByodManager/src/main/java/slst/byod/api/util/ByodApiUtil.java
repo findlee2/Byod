@@ -197,7 +197,7 @@ public class ByodApiUtil {
 	 */
 	public static boolean isValidFileExtension(String ext) {
         
-        final String[] GOOD_EXTENSION = {"mp3", "jpg"}; //향후 확장을 고려하여 배열로 세팅
+        final String[] GOOD_EXTENSION = {"mp3", "mp4", "jpg","png"}; //향후 확장을 고려하여 배열로 세팅
         
         int len = GOOD_EXTENSION.length;
         

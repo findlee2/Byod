@@ -27,38 +27,17 @@
 <script>
 $(document).ready(function(){
 	
-	/** 이벤트 정의 */
-    $(".loginBtn").click(function(){
-        loginAction();
-    });
-	selectList(0); //초기조회 시
+	selectList(); //초기조회 시
 });
 
-var vPage           = 1; //클릭한 페이지 번호
-var vPageFirstIndex = 0; //페이지 시작 번호
 
-function selectList(page){
-	var vUrl  = '';
-	var vPram = '';
-	
-	if("${userVO.user_role}" == '1'){        //관리자 조회
-		vUrl = '/Byod/adminSrchInfoList';
-		//vUrl = '/Byod/adminSrchInfoList';
-		vPram = 'pageNo='+ page;
-	}else{                                   //조사자 조회
-		vUrl  = '/Byod/srchInfoList';
-		if(page !=null){
-			vPram = user_id='${userVO.user_id}';
-		}else{
-			vPram = user_id='${userVO.user_id}';
-		}
-		vPram = user_id='${userVO.user_id}';
-		//vPage = page;
-	}
+function selectList(){
+	vPram = '';
+	vPram = 'reportNo='+ "${reportNo}";
 	
 	$.ajax({
 		  type:"GET",
-		  url: vUrl,
+		  url: "/Byod/srchFinishInfoFList",
 		  data : vPram,		  
 		  dataType	: "json",	
 		  crossOrigin: true,
@@ -76,69 +55,25 @@ function selectList(page){
 
 function onSuccess(data, status, xhr){
 	
-	var vHtml            = "";
-	var vTotPageCnt 	 = 0;
-	var vTotPageCntRound = 0;
-	var vTotPageCntInt   = 0;
+	var vHtml       = "";
+	var vTotPageCnt = 0;
 	
 	$("#result").empty();
-	
-	$.each( data, function(key,val){
 
 		vHtml += "<tr>";
-		if(vPageFirstIndex > 0){
-			vHtml += "	<td>"+eval(vPageFirstIndex+1+key)+"</td>";
-		}else{
-			vHtml += "	<td>"+eval(key+1)+"</td>"; 
-		}
-		vHtml += "	<td><a onclick=detailListView('"+data[key].report_no+"') style=cursor:pointer>"+data[key].report_no+"</a></td>";
-		vHtml += "	<td>"+data[key].business_nm+"</td>";
-		vHtml += "	<td>"+data[key].object_location+"</td>";
-		vHtml += "	<td>"+data[key].check_user_nm+"</td>";
-		vHtml += "	<td>"+data[key].user_id+"</td>";
-		vHtml += "	<td>"+data[key].check_period_start+"</td>";
-		if(data[key].report_stats == '2'){
-			vHtml += "	<td>완료</td>";	
-		}else{
-			vHtml += "	<td>진행중</td>";
-		}
+		vHtml += "	<td>보고서 번호</td>";
+		vHtml += "	<td>"+data.report_no+"</td>";
 		vHtml += "</tr>";
 		
-		vTotPageCnt = data[key].tot_cnt;
-	 });
+		vHtml += "<tr>";
+		vHtml += "	<td>업무명</td>";
+		vHtml += "	<td>"+data.business_nm+"</td>";
+		vHtml += "</tr>";
+		
 	$("#result").html(vHtml);
 	
-	//총 건수를 구한후 페이징 max값 설정한다.	
-	if((vTotPageCnt) > 0){		
-		vTotPageCntRound = Math.round(vTotPageCnt/10);
-		vTotPageCntInt = vTotPageCnt/10;
-		
-		if(vTotPageCntRound >= vTotPageCntInt){
-			vTotPageCnt = parseInt(vTotPageCntRound);
-		}else{
-			vTotPageCnt = (Math.round(vTotPageCnt/10))+1;
-		}
-	}
-	
-	$('#paging').paging({
-		current:vPage, max:vTotPageCnt,
-		onclick:function(e,num){
-			vPage = num;
-			if(vPage > 1){				
-				vPageFirstIndex = eval((vPage-1)*10); //페이지 시작번호 세팅
-				selectList(eval((vPage-1)*10));
-			}else{
-				vPageFirstIndex = 0;
-				selectList(0);
-			}
-		}
-	});
-}
-
-function detailListView(reportNo){
-	
-	$("#reportNo").val(reportNo);
-	$("#frm").submit();
+	$("#demoAudio").attr('src',data.audio_attch_file_url);
+	$("#demoImg").attr('src',data.img_attch_file_url);
 	
 }
 
@@ -148,9 +83,6 @@ function detailListView(reportNo){
 <div id="byod-wrap">
 	<c:import url="/cmm/byodManagerTopView"/>	
 	<div id="container">
-	<form name="frm" id="frm" action="/srchInfo/srchDetailInfo" method="post">
-		<input type="hidden" name="reportNo" id="reportNo">
-	</form>
 		<h2>업무관리</h2>
 		<div class="tb-function">
 			<div class="tb-search">
@@ -182,9 +114,21 @@ function detailListView(reportNo){
 			<tbody id="result">
 				
 			</tbody>
+			
 		</table>
 	</div>
-	<div id="paging"></div>
+	<div>
+	===========================================================================================
+	</div>
+	<div id="audioF">첨부파일 오디오 테스트</div>
+	<audio id='demoAudio' src="" controls></audio>
+	
+	
+	 <div>
+	===========================================================================================
+	</div>
+	<div>첨부파일 이미지 테스트</div>
+	<img id="demoImg" alt="" src="">
 	<div id="footer">Copyright ⓒ 2016 <span>Selimsoft</span> Co.,Ltd. All Rights Reserved.</div>
 </div>
 

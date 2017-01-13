@@ -39,35 +39,6 @@ public class UserManageController extends LogManageUtilParsingController{
 	
 	Base64Utils base64 = new Base64Utils();
 	
-	/**<<<<<<<<<<<<<<테스트 메소드>>>>>>>>>>>>>>>
-	 * 로그인 페이지 화면 호출
-	 * @return
-	 * @throws Exception
-	 */
-	@RequestMapping(value="/test/ajaxTest")
-	public ModelAndView testView() throws Exception{
-		return new ModelAndView("ajaxTest");
-	}
-/*
-	@RequestMapping(value = "/login")
-	@ResponseBody
-	public String members(@RequestParam(value = "id", required = false) String id, @RequestParam(value = "pw", required = false) String pw){
-	    
-	  UserManageVO userVO       = new UserManageVO();
-	  userVO.setUser_id(id);
-	  UserManageVO responseBody = userManageMapper.selectUserInfo(userVO);
-	  
-	  return responseBody.toString();
-	}
-	*/
-	/**
-	 * <<<<<<<<<<<<<<테스트 메소드>>>>>>>>>>>>>>>
-	 */
-	
-	
-
-	
-	
 	/**
 	 * 로그인(모바일)
 	 * @param userId
@@ -270,12 +241,18 @@ public class UserManageController extends LogManageUtilParsingController{
 	 * @throws Exception
 	 */
 	@ApiOperation(value = "로그아웃(웹)", notes = "로그아웃한다.")
+	@ApiImplicitParams({
+	    @ApiImplicitParam(name = "userId",      value = "사용자 아이디",  	required = true, dataType = "string", paramType = "query"),
+	    @ApiImplicitParam(name = "userNm",      value = "사용자 이름", 		required = true, dataType = "string", paramType = "query")
+	  })	
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
-	@RequestMapping(value = "/Byod/userWLoginOut", method = RequestMethod.GET)	
-	public ResponseEntity<String> userWLoginOut(HttpServletRequest request) throws Exception {
+	@RequestMapping(value = "/Byod/userWLoginOut", method = RequestMethod.POST)	
+	public ResponseEntity<String> userWLoginOut(HttpServletRequest request,
+			@RequestParam("userId") String userId,
+			@RequestParam("userNm") String userNm) throws Exception {
 		
 		HttpSession session = request.getSession();
-		UserManageVO UserVO = (UserManageVO)request.getSession().getAttribute("userVO");
+		//UserManageVO UserVO = (UserManageVO)request.getSession().getAttribute("userVO");
 		
 		/**
 		 * [로그생성]
@@ -294,7 +271,7 @@ public class UserManageController extends LogManageUtilParsingController{
 		      처리자 아이디(NotNull)
 		 */
 		adminInsertRegistBusinessLog("2",null,null,null,null,null,null, null, 
-				null, null, UserVO.getUser_nm(),UserVO.getUser_id());
+				null, null, userNm,userId);
 		
 		session.setAttribute("userVO", null);
 		
@@ -302,42 +279,30 @@ public class UserManageController extends LogManageUtilParsingController{
 	}
 	
 	/**
-	 * 조사자등록(관리자용)
+	 * 회원가입(조사자용)
 	 * @param userId
 	 * @param userNm
-	 * @param userOtgNo
 	 * @return
 	 * @throws Exception
 	 */
-	@ApiOperation(value = "조사자 등록(관리자용)", notes = "관리자가 조사자 등록을 한다.(로그를 남길려면 관리자 로그인 후 진행해야한다.)", response = UserManageVO.class)
+	@ApiOperation(value = "회원가입(조사자용)", notes = "조사자가 회원가입을 한다.", response = UserManageVO.class)
 	@ApiImplicitParams({
 	    @ApiImplicitParam(name = "userId",      value = "사용자 아이디",		required = true,  dataType = "string", paramType = "query"),
-	    @ApiImplicitParam(name = "userNm",      value = "사용자 이름",	  	required = true,  dataType = "string", paramType = "query"),
-	    @ApiImplicitParam(name = "userOtgNo",   value = "OTG 번호",  	  	required = false, dataType = "string", paramType = "query")
+	    @ApiImplicitParam(name = "userNm",      value = "사용자 이름",	  	required = true,  dataType = "string", paramType = "query")
 	  })	
 	@ApiResponses(value = {@ApiResponse(code = 409, message = "Conflict(해당 아이디가 이미 존재)")})
-	@RequestMapping(value = "/Byod/adminUserRegist", method = RequestMethod.POST)	
-	public ResponseEntity<Object> adminUserRegist(@RequestParam("userId") String userId,
-											      @RequestParam("userNm") String userNm,
-											      @RequestParam(value="userOtgNo", required=false) String userOtgNo,
-											      HttpServletRequest request) throws Exception {
+	@RequestMapping(value = "/Byod/userRegist", method = RequestMethod.POST)	
+	public ResponseEntity<Object> userRegist(@RequestParam("userId") String userId,
+											      @RequestParam("userNm") String userNm) throws Exception {
 		
-		UserManageVO AdimUserVO         = (UserManageVO)request.getSession().getAttribute("userVO");
 		UserManageVO userVO             = new UserManageVO();
 		UserPwAlgorithm userPwAlgorithm = new UserPwAlgorithm();
 		UserManageVO responseBody       = null;
 		String iniPw                    = "1";	//초기 조사자 암호 세팅
 		int cnt                         = 0;
 		
-		if(ByodApiUtil.isEmpty(AdimUserVO)){
-			log.info("[ByodApiUtil.isEmpty(AdimUserVO)] : null");
-			return new ResponseEntity<Object>(HttpStatus.BAD_REQUEST);
-		}
-		
 		userVO.setUser_id(userId);
 		userVO.setUser_nm(base64.encrypt(userNm, RoundKey));
-		userVO.setUser_otg_no(userOtgNo);
-		
 		//비밀번호 암호화(단방향 SHA-256)
 		userVO.setUser_pw(userPwAlgorithm.UserPwAlgorithm(iniPw));
 		
@@ -348,25 +313,6 @@ public class UserManageController extends LogManageUtilParsingController{
 				
 				responseBody.setUser_nm(base64.decrypt(responseBody.getUser_nm(), RoundKey));
 			}
-			
-			/**
-			 * [로그생성]
-			 * [argument]
-			 * 구분 (NotNull)
-			      보고서 번호 
-			      업무명            
-			      보고서 담당자 아이디        
-			      보고서 담당자 이름                   
-			      최종 보고서 업로드 시간
-			      보고서 처리구분
-			      단말기 접속경로
-			      단말기위치 경도
-			      단말기위치 위도
-			      처리자 이름(NotNull)
-			      처리자 아이디(NotNull)
-			 */
-			adminInsertRegistBusinessLog("6",null,null,responseBody.getUser_id(),responseBody.getUser_nm(),null,null, null, 
-					null, null, AdimUserVO.getUser_nm(),AdimUserVO.getUser_id());
 			
 		}catch(Exception e){
 			e.getStackTrace();			
@@ -391,7 +337,9 @@ public class UserManageController extends LogManageUtilParsingController{
 	    @ApiImplicitParam(name = "userNm",      value = "사용자 이름",	  	required = false,  dataType = "string", paramType = "query"),
 	    @ApiImplicitParam(name = "userAppveYn", value = "사용자 승인여부",	required = false,  dataType = "string", paramType = "query"),
 	    @ApiImplicitParam(name = "userRole",    value = "사용자 권한",	  	required = false,  dataType = "string", paramType = "query"),
-	    @ApiImplicitParam(name = "userOtgNo",   value = "OTG 번호",  	  	required = false,  dataType = "string", paramType = "query")
+	    @ApiImplicitParam(name = "userOtgNo",   value = "OTG 번호",  	  	required = false,  dataType = "string", paramType = "query"),
+	    @ApiImplicitParam(name = "adminUserId", value = "관리자 아이디",		required = true,   dataType = "string", paramType = "query"),
+	    @ApiImplicitParam(name = "adminUserNm", value = "관리자 이름",		required = true,   dataType = "string", paramType = "query")
 	  })	
 	@RequestMapping(value = "/Byod/adminUserUpdate", method = RequestMethod.PUT)	
 	public ResponseEntity<Object> adminUserUpdate(@RequestParam("userId") String userId,
@@ -399,15 +347,15 @@ public class UserManageController extends LogManageUtilParsingController{
 											         @RequestParam(value="userAppveYn" , required=false) String userAppveYn,
 											         @RequestParam(value="userRole" , required=false) String userRole,
 											         @RequestParam(value="userOtgNo", required=false) String userOtgNo,
-											         HttpServletRequest request) throws Exception {
+											         @RequestParam("adminUserId") String adminUserId,
+											         @RequestParam("adminUserNm") String adminUserNm ) throws Exception {
 		
-		UserManageVO AdimUserVO         = (UserManageVO)request.getSession().getAttribute("userVO");
 		UserManageVO userVO             = new UserManageVO();
 		UserManageVO responseBody       = null;
 		int cnt                         = 0;
 		
-		if(ByodApiUtil.isEmpty(AdimUserVO)){
-			log.info("[ByodApiUtil.isEmpty(AdimUserVO)] : null");
+		if(ByodApiUtil.isEmpty(adminUserId)){
+			log.info("[ByodApiUtil.isEmpty(adminUserId)] : null");
 			return new ResponseEntity<Object>(HttpStatus.BAD_REQUEST);
 		}
 		
@@ -442,7 +390,7 @@ public class UserManageController extends LogManageUtilParsingController{
 			      처리자 아이디(NotNull)
 			 */
 			adminInsertRegistBusinessLog("8",null,null,responseBody.getUser_id(),responseBody.getUser_nm(),null,null, null, 
-					null, null, AdimUserVO.getUser_nm(),AdimUserVO.getUser_id());
+					null, null, adminUserNm,adminUserId);
 			
 		}catch(Exception e){
 			e.getStackTrace();			
@@ -462,10 +410,10 @@ public class UserManageController extends LogManageUtilParsingController{
 	@ApiImplicitParams({
 	    @ApiImplicitParam(name = "userId",      value = "사용자 아이디",		required = true,  dataType = "string", paramType = "query")
 	  })	
-	@RequestMapping(value = "/Byod/adminUserDelete", method = RequestMethod.DELETE)	
+	@RequestMapping(value = "/Byod/adminUserDelete", method = RequestMethod.PUT)	
 	public ResponseEntity<String> adminUserDelete(@RequestParam("userId") String userId,
 														HttpServletRequest request ) throws Exception {
-		
+		log.info("[AdimUserVO ]  : "+ (UserManageVO)request.getSession().getAttribute("userVO"));
 		UserManageVO AdimUserVO         = (UserManageVO)request.getSession().getAttribute("userVO");
 		UserManageVO userVO             = new UserManageVO();
 		
@@ -672,6 +620,7 @@ public class UserManageController extends LogManageUtilParsingController{
 											          HttpServletRequest request) throws Exception {
 		
 		UserManageVO AdimUserVO    = (UserManageVO)request.getSession().getAttribute("userVO");
+		log.info("[AdimUserVO] ::::::::::::"+ AdimUserVO.getUser_id());
 		UserManageVO userVO        = new UserManageVO();
 		UserManageVO reUserVO      = null;
 		int cnt                    = 0;

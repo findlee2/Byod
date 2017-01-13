@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -63,6 +62,44 @@ public class SrchManageController extends LogManageUtilParsingController{
 	Base64Utils base64  = new Base64Utils();
 	
 	HttpSession session = null;
+	
+	/**
+	 * 조사자가 자신의 조사업무 목록을 조회한다.(조사자용)
+	 * @param userId
+	 * @return
+	 * @throws Exception
+	 */
+	@ApiOperation(value = "웹-조사업무 목록 조회(조사자용)", notes = "조사자가 자신의 조사 업무  리스트를 조회한다.", response = SrchManageVO.class)
+	@ApiImplicitParams({
+	    @ApiImplicitParam(name = "userId",   value = "사용자 아이디",  required = true, dataType = "string", paramType = "query")
+	  })
+	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
+	@RequestMapping(value = "/Byod/srchWebInfoList", method = RequestMethod.GET)
+	public ResponseEntity<Object> srchWebInfoList(@RequestParam String userId) throws Exception {
+
+		SrchManageVO srchVO             = new SrchManageVO();
+		List<SrchManageVO> responseBody = null;
+		srchVO.setUser_id(userId);
+			
+		responseBody = srchManageMapper.selectSrchWebInfoList(srchVO);
+
+		for(int i=0; i<responseBody.size(); i++){
+			//복호화
+			responseBody.get(i).setBusiness_nm(base64.decrypt(responseBody.get(i).getBusiness_nm(), RoundKey));
+			responseBody.get(i).setObject_place_nm(base64.decrypt(responseBody.get(i).getObject_place_nm(), RoundKey));
+			responseBody.get(i).setObject_location(base64.decrypt(responseBody.get(i).getObject_location(), RoundKey));
+			responseBody.get(i).setObject_use(base64.decrypt(responseBody.get(i).getObject_use(), RoundKey));
+			responseBody.get(i).setObject_buil_struc(base64.decrypt(responseBody.get(i).getObject_buil_struc(), RoundKey));
+			responseBody.get(i).setCheck_extgsh_result(base64.decrypt(responseBody.get(i).getCheck_extgsh_result(), RoundKey));
+			responseBody.get(i).setCheck_alarm_equip_result(base64.decrypt(responseBody.get(i).getCheck_alarm_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_extgsh_equip_result(base64.decrypt(responseBody.get(i).getCheck_extgsh_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_flee_equip_result(base64.decrypt(responseBody.get(i).getCheck_flee_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_etc_equip_result(base64.decrypt(responseBody.get(i).getCheck_etc_equip_result(), RoundKey));
+			responseBody.get(i).setCheck_user_nm(base64.decrypt(responseBody.get(i).getCheck_user_nm(), RoundKey));
+		}
+		
+		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
+	}
 	
 	/**
 	 * 조사자가 자신의 조사업무 목록을 조회한다.(조사자용)
@@ -134,6 +171,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 		responseBody.setCheck_etc_equip_result(base64.decrypt(responseBody.getCheck_etc_equip_result(), RoundKey));
 		responseBody.setCheck_user_nm(base64.decrypt(responseBody.getCheck_user_nm(), RoundKey));
 				
+		
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
 	
@@ -143,15 +181,12 @@ public class SrchManageController extends LogManageUtilParsingController{
 	 * @return
 	 * @throws Exception
 	 */
-	@ApiOperation(value = "조사업무 목록 조회(관리자용)", notes = "관리자가 조사 업무  리스트를  조회한다.", response = SrchManageVO.class)
-	@ApiImplicitParams({
-	    @ApiImplicitParam(name = "pageNo",   value = "페이징 번호",  required = false, dataType = "string", paramType = "query")
-	  })
+	@ApiOperation(value = "조사업무 목록 조회(관리자용)", notes = "관리자가 조사 업무  리스트를  조회한다.", response = SrchManageVO.class)	
 	@ApiResponses(value = {@ApiResponse(code = 400, message = "Bad Request")})
 	@RequestMapping(value = "/Byod/adminSrchInfoList", method = RequestMethod.GET)
-	public ResponseEntity<Object> adminSrchInfoList(@RequestParam(value="pageNo", required=false, defaultValue="0") int pageNo )throws Exception {
+	public ResponseEntity<Object> adminSrchInfoList()throws Exception {
 		
-		List<SrchManageVO> responseBody = srchManageMapper.selectUserSrchInfoList(pageNo);
+		List<SrchManageVO> responseBody = srchManageMapper.selectUserSrchInfoList();
 
 		for(int i=0; i<responseBody.size(); i++){
 			//복호화
@@ -177,7 +212,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 	 * @return
 	 * @throws Exception
 	 */
-	@ApiOperation(value = "조사업무 상세 조회(관리자용)", notes = "관리자가 조사 업무  상세조회를 조회한다.", response = SrchManageVO.class)
+	/*@ApiOperation(value = "조사업무 상세 조회(관리자용)", notes = "관리자가 조사 업무  상세조회를 조회한다.", response = SrchManageVO.class)
 	@ApiImplicitParams({
 	    @ApiImplicitParam(name = "reportNo",   value = "보고서 번호",  required = true, dataType = "string", paramType = "query")
 	  })
@@ -206,7 +241,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 				
 		return new ResponseEntity<Object>(responseBody, HttpStatus.OK);
 	}
-	
+	*/
 	/**
 	 * 조사업무 등록 전 보고서 번호 조회(관리자용)
 	 * @return
@@ -494,7 +529,7 @@ public class SrchManageController extends LogManageUtilParsingController{
 		UserManageVO userVO   = (UserManageVO)request.getSession().getAttribute("userVO");
 		SrchManageVO srchVO   = new SrchManageVO();
 		SrchManageVO reSrchVO = null;
-		
+		log.info("[userVO.getUser_id()::::]"+ userVO.getUser_id());
 		if(ByodApiUtil.isEmpty(userVO)){
 			log.info("[ByodApiUtil.isEmpty(userVO)] : null");
 			return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
@@ -502,12 +537,13 @@ public class SrchManageController extends LogManageUtilParsingController{
 		
 		srchVO.setReport_no(reportNo);
 		
-		srchManageMapper.deleteSrchInfoList(srchVO);
-		
 		reSrchVO = (SrchManageVO) srchManageMapper.selectSrchDetailInfo(srchVO);
 		
 		reSrchVO.setBusiness_nm(base64.decrypt(reSrchVO.getBusiness_nm(), RoundKey));
 		reSrchVO.setCheck_user_nm(base64.decrypt(reSrchVO.getBusiness_nm(), RoundKey));
+		
+		srchManageMapper.deleteSrchInfoList(srchVO);
+		
 		
 		/**
 		 * [로그생성]
@@ -607,15 +643,15 @@ public class SrchManageController extends LogManageUtilParsingController{
 			//responseBody.setLocation_lat(locationLat);
 			//responseBody.setLocation_lon(locationLon);
 			responseBody.setCheck_extgsh_kind(checkExtgshKind);
-			responseBody.setCheck_extgsh_result(checkExtgshResult);
+			responseBody.setCheck_extgsh_result(base64.encrypt(checkExtgshResult, RoundKey));
 			responseBody.setCheck_alarm_equip_kind(checkAlarmEquipKind);
-			responseBody.setCheck_alarm_equip_result(checkAlarmEquipResult);
+			responseBody.setCheck_alarm_equip_result(base64.encrypt(checkAlarmEquipResult, RoundKey));
 			responseBody.setCheck_extgsh_equip_kind(checkExtgshEquipKind);
-			responseBody.setCheck_extgsh_equip_result(checkExtgshEquipResult);
+			responseBody.setCheck_extgsh_equip_result(base64.encrypt(checkExtgshEquipResult, RoundKey));
 			responseBody.setCheck_flee_equip_kind(checkFleeEquipKind);
-			responseBody.setCheck_flee_equip_result(checkFleeEquipResult);
+			responseBody.setCheck_flee_equip_result(base64.encrypt(checkFleeEquipResult, RoundKey));
 			responseBody.setCheck_etc_equip_kind(checkEtcEquipKind);
-			responseBody.setCheck_etc_equip_result(checkEtcEquipResult);
+			responseBody.setCheck_etc_equip_result(base64.encrypt(checkEtcEquipResult, RoundKey));
 			
 			responseBody.setSpecial_note(specialNote);
 			
@@ -693,10 +729,10 @@ public class SrchManageController extends LogManageUtilParsingController{
 		
 		try{
 				
-			String sourceFileName = "";
+			String sourceFileName          = "";
 			String sourceFileNameExtension = "";
 
-			//mp3,jpg
+			//mp3,jpg,png
 			for(int i=0; i<sourceFile.length; i++){
 				
 				sourceFileName = sourceFile[i].getOriginalFilename();

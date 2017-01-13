@@ -14,8 +14,13 @@
    <select id="selectAdminSrchEqupmntInfoList" resultType="SrchEqupmntManageVO">
 		SELECT *
 		  FROM bd_srch_equpmnt_info
-		  <if test="srch_equpmnt_id != null">WHERE srch_equpmnt_id = #{srch_equpmnt_id}
-		  </if>
+		 ORDER BY srch_equpmnt_id DESC
+   </select>
+   
+   <select id="selectAdminSrchEqupmntDetailInfo" resultType="SrchEqupmntManageVO" parameterType="SrchEqupmntManageVO">
+		SELECT *
+		  FROM bd_srch_equpmnt_info
+		 WHERE srch_equpmnt_id = #{srch_equpmnt_id}		  
 		 ORDER BY srch_equpmnt_id DESC
    </select>
    

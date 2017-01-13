@@ -40,7 +40,7 @@ public class SrchEqupmntManageController {
 	@RequestMapping(value = "/Byod/adminSrchEqupmntInfoAllList", method = RequestMethod.GET)
 	public ResponseEntity<Object> adminSrchEqupmntInfoAllList() throws Exception {
 		
-		List<SrchEqupmntManageVO> responseBody = srchEqupmntManageMapper.selectAdminSrchEqupmntInfoList(null);
+		List<SrchEqupmntManageVO> responseBody = srchEqupmntManageMapper.selectAdminSrchEqupmntInfoList();
 		
 		for(int i=0; i<responseBody.size(); i++){
 			responseBody.get(i).setSrch_equpmnt_identi_no(base64.decrypt(responseBody.get(i).getSrch_equpmnt_identi_no(), RoundKey));
@@ -58,7 +58,7 @@ public class SrchEqupmntManageController {
 	 */
 	@ApiOperation(value = "조사장비 조회(관리자용)", notes = "관리자가 조사장비를 수정 및 삭제를 하기위한 선 조회를 한다.", response = SrchEqupmntManageVO.class)
 	@ApiImplicitParams({
-		@ApiImplicitParam(name = "srchEqupmntId", value = "조사장비 고유번호",	required = true,  dataType = "string", paramType = "query")
+		@ApiImplicitParam(name = "srchEqupmntId", value = "조사장비 아이디",	required = true,  dataType = "string", paramType = "query")
 	  })
 	@RequestMapping(value = "/Byod/adminSrchEqupmntInfoList", method = RequestMethod.GET)
 	public ResponseEntity<Object> adminSrchEqupmntInfoList(@RequestParam("srchEqupmntId") String srchEqupmntId) throws Exception {
@@ -66,7 +66,7 @@ public class SrchEqupmntManageController {
 			SrchEqupmntManageVO equpmntVO = new SrchEqupmntManageVO();
 			equpmntVO.setSrch_equpmnt_id(srchEqupmntId);
 			
-			SrchEqupmntManageVO responseBody = (SrchEqupmntManageVO) srchEqupmntManageMapper.selectAdminSrchEqupmntInfoList(equpmntVO);
+			SrchEqupmntManageVO responseBody = (SrchEqupmntManageVO) srchEqupmntManageMapper.selectAdminSrchEqupmntDetailInfo(equpmntVO);
 		
 			responseBody.setSrch_equpmnt_identi_no(base64.decrypt(responseBody.getSrch_equpmnt_identi_no(), RoundKey));
 			responseBody.setSrch_equpmnt_kind(base64.decrypt(responseBody.getSrch_equpmnt_kind(), RoundKey));
@@ -128,9 +128,9 @@ public class SrchEqupmntManageController {
 	 */
 	@ApiOperation(value = "조사장비 수정(관리자용)", notes = "관리자가 조사장비를 수정한다.")
 	@ApiImplicitParams({
-		@ApiImplicitParam(name = "srchEqupmntId",       value = "조사장비 고유번호",	required = true,  dataType = "string", paramType = "query"),
-	    @ApiImplicitParam(name = "srchEqupmntIdentiNo", value = "조사장비 고유번호",	required = false,  dataType = "string", paramType = "query"),
-	    @ApiImplicitParam(name = "srchEqupmntKind",     value = "조사장비 종류",	  	required = false,  dataType = "string", paramType = "query"),
+		@ApiImplicitParam(name = "srchEqupmntId",       value = "조사장비 아이디",	required = true,  dataType = "string", paramType = "query"),
+	    @ApiImplicitParam(name = "srchEqupmntIdentiNo", value = "조사장비 고유번호",	required = false, dataType = "string", paramType = "query"),
+	    @ApiImplicitParam(name = "srchEqupmntKind",     value = "조사장비 종류",	  	required = false, dataType = "string", paramType = "query"),
 	    @ApiImplicitParam(name = "userNm",   			value = "사용자 이름",  	required = false, dataType = "string", paramType = "query"),
 	    @ApiImplicitParam(name = "userId",      		value = "사용자 아이디",	  	required = false, dataType = "string", paramType = "query"),
 	    @ApiImplicitParam(name = "useYn",      			value = "사용여부",	  	required = false, dataType = "string", paramType = "query")
@@ -173,9 +173,9 @@ public class SrchEqupmntManageController {
 	 */
 	@ApiOperation(value = "조사자 장비 삭제(관리자용)", notes = "관리자가 조사장비를 삭제한다.")
 	@ApiImplicitParams({
-		@ApiImplicitParam(name = "srchEqupmntId", value = "조사장비 고유번호",	required = true,  dataType = "string", paramType = "query")
+		@ApiImplicitParam(name = "srchEqupmntId", value = "조사장비 아이디",	required = true,  dataType = "string", paramType = "query")
 	  })	
-	@RequestMapping(value = "/Byod/adminSrchEqupmntDelete", method = RequestMethod.DELETE)	
+	@RequestMapping(value = "/Byod/adminSrchEqupmntDelete", method = RequestMethod.PUT)	
 	public ResponseEntity<String> adminSrchEqupmntDelete(@RequestParam("srchEqupmntId") String srchEqupmntId) throws Exception {
 		
 		SrchEqupmntManageVO equpmntVO  = new SrchEqupmntManageVO();

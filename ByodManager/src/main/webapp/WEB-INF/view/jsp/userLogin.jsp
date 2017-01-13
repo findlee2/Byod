@@ -63,7 +63,7 @@ function loginAction(){
 	$.ajax({
 		  type:"GET",
 		  url: '/Byod/userWLoginInfo',
-		  data : $("#loginForm").serialize(),		  
+		  data : $("#loginForm").serialize(),
 		  dataType	: "json",		  
 		  cache : false,
           success : onSuccess,		 

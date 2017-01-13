@@ -45,7 +45,7 @@ public class SrchManageVO {
 	private String img_attch_file_url;                 //이미지 경로
 	private String audio_attch_file_url;               //오디오 경로
 	private int attch_file_cnt;                        //첨부파일 갯수
-	private int tot_cnt;                               //보고서 총갯수
+	//private int tot_cnt;                               //보고서 총갯수
 	
 	
 }

@@ -8,6 +8,13 @@ import org.apache.ibatis.annotations.Mapper;
 public interface SrchManageMapper {
 	
 	/**
+	 * 웹 -조사업무리스트 조회(조사자용)
+	 * @param srchVO
+	 * @return
+	 */
+	public List<SrchManageVO> selectSrchWebInfoList(SrchManageVO srchVO);
+	
+	/**
 	 * 조사업무리스트 조회(조사자용)
 	 * @param srchVO
 	 * @return
@@ -25,7 +32,7 @@ public interface SrchManageMapper {
 	 * 조사업무 목록 조회(관리자용)
 	 * @return
 	 */
-	public List<SrchManageVO> selectUserSrchInfoList(Integer pageNo);
+	public List<SrchManageVO> selectUserSrchInfoList();
 	
 	/**
 	 * 조사업무 등록 전 보고서 번호 조회(관리자용)
