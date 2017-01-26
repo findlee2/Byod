@@ -1,0 +1,219 @@
+586  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 5716 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+651  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+652  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5202 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.055 seconds (JVM running for 5.87)
+48927 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+49026 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+49096 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+49132 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+49260 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+49267 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+3671837 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/AdminSrchUserInfoList
+3672420 [http-nio-8080-exec-8] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - ==>  Preparing: SELECT * FROM bd_user_info WHERE 1=1 ORDER BY user_reg_dt DESC, user_appve_yn DESC 
+3672442 [http-nio-8080-exec-8] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - ==> Parameters: 
+3672458 [http-nio-8080-exec-8] DEBUG s.b.a.u.U.selectAdminSrchUserInfoList - <==      Total: 9
+3698377 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/AdminSrchInfoList
+3698389 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT * FROM bd_srch_info ORDER BY submit_dt DESC, report_cre_dt DESC, report_no ASC 
+3698390 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 
+3698396 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 3
+13950501 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/UserRegMemberDuplCheck
+13950529 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserCheck - ==>  Preparing: SELECT count(*) FROM bd_user_info WHERE user_id = ? 
+13950532 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserCheck - ==> Parameters: ahnsu234(String)
+13950591 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserCheck - <==      Total: 1
+13972514 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/UserRegMemberDuplCheck
+13972516 [http-nio-8080-exec-1] DEBUG s.b.a.u.U.selectUserCheck - ==>  Preparing: SELECT count(*) FROM bd_user_info WHERE user_id = ? 
+13972517 [http-nio-8080-exec-1] DEBUG s.b.a.u.U.selectUserCheck - ==> Parameters: ahnsu2344(String)
+13972518 [http-nio-8080-exec-1] DEBUG s.b.a.u.U.selectUserCheck - <==      Total: 1
+16207897 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/SrchInfoList
+16207990 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchInfoList - ==>  Preparing: SELECT * FROM bd_srch_info WHERE user_id = ? ORDER BY report_cre_dt DESC,report_no ASC 
+16207991 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchInfoList - ==> Parameters: ahnsu234(String)
+16207997 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchInfoList - <==      Total: 2
+16632540 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+16632558 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+16632651 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+16632651 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+16847695 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [PUT]/Byod/SrchUserPassWordUpdate
+16847735 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+16847736 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: ahnsu234(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+16847737 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+16847738 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.updateSrchUserPassWord - ==>  Preparing: UPDATE bd_user_info SET user_pw = ? WHERE user_id = ? 
+16847739 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.updateSrchUserPassWord - ==> Parameters: a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String), ahnsu234(String)
+16847816 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.updateSrchUserPassWord - <==    Updates: 1
+607  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 9996 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+611  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+611  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5442 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.28 seconds (JVM running for 7.285)
+9538 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+9661 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+9818 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+9818 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+619  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 1460 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+625  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+626  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5484 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.33 seconds (JVM running for 5.974)
+5804 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+5854 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+6016 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+6016 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+13295 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/SrchInfoList
+13712 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchInfoList - ==>  Preparing: SELECT * FROM bd_srch_info WHERE user_id = ? ORDER BY report_stats ASC, report_cre_dt DESC,report_no ASC 
+13732 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchInfoList - ==> Parameters: ahnsu234(String)
+13744 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchInfoList - <==      Total: 2
+733  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 1004 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+737  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+737  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5212 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.011 seconds (JVM running for 5.749)
+6614 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+6665 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+6822 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+6822 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+41249 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/AdminUserRegMember
+41554 [http-nio-8080-exec-10] DEBUG s.b.a.u.U.insertUserInfo - ==>  Preparing: INSERT INTO bd_user_info( user_id, user_nm, user_pw, user_appve_yn, user_reg_dt, user_role, user_otg_no) VALUES(?, ?, ?, default, now(), default, ?) 
+41573 [http-nio-8080-exec-10] DEBUG s.b.a.u.U.insertUserInfo - ==> Parameters: sdfsdfsdf(String), sdfsdfsdf(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String), BYOD-00000400(String)
+41666 [http-nio-8080-exec-10] DEBUG s.b.a.u.U.insertUserInfo - <==    Updates: 1
+41673 [http-nio-8080-exec-10] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+41674 [http-nio-8080-exec-10] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: sdfsdfsdf(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+41696 [http-nio-8080-exec-10] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+616  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 5248 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+620  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+620  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5410 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.25 seconds (JVM running for 5.914)
+7897 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+7964 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+8175 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+8179 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+590  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 9416 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+594  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+594  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5500 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.351 seconds (JVM running for 5.995)
+11486 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+17527 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/error
+36273 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+43648 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/error
+118373 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+119335 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+120402 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+124280 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/AdminUserRegMember
+124532 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.insertUserInfo - ==>  Preparing: INSERT INTO bd_user_info( user_id, user_nm, user_pw, user_appve_yn, user_reg_dt, user_role, user_otg_no) VALUES(?, ?, ?, default, now(), default, ?) 
+124552 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.insertUserInfo - ==> Parameters: 4444(String), 4444(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String), 4444(String)
+124611 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.insertUserInfo - <==    Updates: 1
+124613 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+124614 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: 4444(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+124622 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+594  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 7628 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+598  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+598  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5752 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.601 seconds (JVM running for 6.226)
+6717 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+6766 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+6898 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+6898 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+29823 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/UserLoginInfo
+30117 [http-nio-8080-exec-8] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? AND user_otg_no = ? 
+30136 [http-nio-8080-exec-8] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: findlee2(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String), BYOD-00000346(String)
+30145 [http-nio-8080-exec-8] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+35801 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/UserLoginInfo
+35803 [http-nio-8080-exec-9] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? AND user_otg_no = ? 
+35804 [http-nio-8080-exec-9] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: findlee2(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String), BYOD-00000347(String)
+35805 [http-nio-8080-exec-9] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 0
+633  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 7236 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+637  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+638  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+4097 [main] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'srchManageController': Unsatisfied dependency expressed through field 'srchManageMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'srchManageMapper' defined in file [C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin\slst\byod\api\srchManage\SrchManageMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin\mybatis\mapper\userManageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for slst.byod.api.userManage.UserManageMapper.selectUserInfo
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:21)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'srchManageMapper' defined in file [C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin\slst\byod\api\srchManage\SrchManageMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin\mybatis\mapper\userManageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for slst.byod.api.userManage.UserManageMapper.selectUserInfo
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1312)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin\mybatis\mapper\userManageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for slst.byod.api.userManage.UserManageMapper.selectUserInfo
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1128)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1022)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1297)
+	... 30 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin\mybatis\mapper\userManageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for slst.byod.api.userManage.UserManageMapper.selectUserInfo
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 42 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin\mybatis\mapper\userManageMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for slst.byod.api.userManage.UserManageMapper.selectUserInfo
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:522)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:381)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:546)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:130)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$2310b9cf.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$2310b9cf$$FastClassBySpringCGLIB$$f9331508.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$2310b9cf.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 43 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for slst.byod.api.userManage.UserManageMapper.selectUserInfo
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:520)
+	... 56 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for slst.byod.api.userManage.UserManageMapper.selectUserInfo
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:837)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:809)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:633)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:109)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 58 common frames omitted
+608  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 4616 (C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager\bin started by ig in C:\Users\ig\Documents\workspace-sts-3.8.1.RELEASE\ByodManager)
+613  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+613  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5492 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.34 seconds (JVM running for 6.179)
+7962 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+8036 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+8198 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+8203 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+32268 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/UserWLoginInfo
+32589 [http-nio-8080-exec-7] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+32608 [http-nio-8080-exec-7] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: findlee2(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+32617 [http-nio-8080-exec-7] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1

@@ -1,0 +1,107 @@
+897  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 4692 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+944  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+944  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5749 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.36 seconds (JVM running for 6.233)
+924  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 1660 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+956  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+957  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6388 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.981 seconds (JVM running for 6.856)
+959  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 11776 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+962  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+965  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6152 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.71 seconds (JVM running for 6.677)
+592  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 1888 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+596  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+596  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6372 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.22 seconds (JVM running for 6.883)
+8145 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8164 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+8857 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8859 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+12387 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+12881 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+12897 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+12941 [http-nio-8080-exec-6] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+12942 [http-nio-8080-exec-6] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+12944 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+12944 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+12956 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+12957 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000181
+12957 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000182
+12958 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+12960 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000182(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+12999 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+13000 [http-nio-8080-exec-6] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+13039 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+13338 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+20713 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+20723 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+23767 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+23770 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+24669 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+24670 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+25416 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+25421 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+26351 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+26354 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+26867 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+26869 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+27713 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+27716 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+28631 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+28633 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+29339 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+29340 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+30855 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+30864 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+53587 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+53595 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+53659 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+53661 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+56923 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+56925 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+56926 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+56927 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+56928 [http-nio-8080-exec-4] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+56928 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+56929 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+56930 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+56931 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000182
+56931 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000183
+56932 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+56933 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000183(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+56994 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+56994 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+57003 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+57207 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+635  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 2068 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+639  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+640  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6543 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.361 seconds (JVM running for 7.058)
+8197 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8221 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+12679 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+12952 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+12969 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), ypeBEsobvcr6wjGzmiPcTaeG7/gUfE5yuYB3ha/uSLs=(String)
+12976 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 0
+12978 [http-nio-8080-exec-2] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: true
+17262 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+17264 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+17265 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+17268 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+17268 [http-nio-8080-exec-3] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+17270 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+17271 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+17273 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+17274 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000183
+17274 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000184
+17275 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+17276 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000184(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+17329 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+17330 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+17358 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+17830 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+21653 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchDetailInfo
+21845 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchDetailInfo.jsp
+23217 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchFinishInfoFList
+23239 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error

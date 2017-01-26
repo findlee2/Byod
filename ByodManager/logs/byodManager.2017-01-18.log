@@ -1,0 +1,80 @@
+1014 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 5000 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1047 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1048 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6487 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.058 seconds (JVM running for 7.239)
+727  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 4724 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+732  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+732  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+7280 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 7.098 seconds (JVM running for 9.471)
+101346 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+101754 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+101771 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000021(String)
+101804 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+110797 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+112481 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+112484 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000021(String)
+112640 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+233132 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+233138 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+233153 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+250713 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+250726 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000005(String), SL_ResultReport_000021(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), TfupRxJlZbzhy21ddMtsYHG4Yn86OwDB.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+250759 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+254101 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile 1. 비투비-01-NEW MEN.mp3]: success!!
+274539 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+274543 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+274548 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+278381 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+278403 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000006(String), SL_ResultReport_000021(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), kZEEy50jGq8GzSqzO3yRXKLQUxfaElSA.png(String), wYPE4hBvV9D27mI9rkHFBEuntzj46AYLZjYyh6hi9fU=(String), png(String)
+278472 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+279155 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile 2016-11-23 15;13;49.PNG]: success!!
+358746 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+358751 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+358752 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000020(String)
+358836 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+361029 [http-nio-8080-exec-3] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+361454 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+361462 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000020(String)
+361468 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+386603 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+386609 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+386617 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+392711 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+392728 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000007(String), SL_ResultReport_000020(String), ahnsu234(String), 2(String), t0qNBOtUxM78gX6eZ+7SOA==(String), FbZ0I60E1vhk9r6ICrbyzM8GXYV4fnMc.jpg(String), 9jQeYjGoaHpAbm2kjGyt8A==(String), jpg(String)
+392769 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+394865 [http-nio-8080-exec-3] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile question.jpg]: success!!
+405395 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectMaxFileId - ==>  Preparing: SELECT max(file_id) FROM bd_attch_file_info 
+405397 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectMaxFileId - ==> Parameters: 
+405399 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectMaxFileId - <==      Total: 1
+418796 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.insertAttchFile - ==>  Preparing: INSERT INTO bd_attch_file_info( file_id, report_no, user_id, attch_file_kind, attch_file_path, attch_file_nm, ori_file_nm, attch_file_extsn, cre_dt) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, now()) 
+418813 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.insertAttchFile - ==> Parameters: FILE_0000000008(String), SL_ResultReport_000020(String), ahnsu234(String), 1(String), t0qNBOtUxM78gX6eZ+7SOA==(String), mxScSmf8boGb46eb2CdWXzjcyWUfEIyU.mp3(String), UqoiMPnwhC/z1LJ0RLf3non3HlX8ciBHKCy1taduXus=(String), mp3(String)
+418849 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.insertAttchFile - <==    Updates: 1
+420158 [http-nio-8080-exec-3] INFO  s.b.a.s.SrchManageController - [uploadAttachment method - sourceFile 1. 비투비-01-NEW MEN.mp3]: success!!
+921  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 5920 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+922  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+924  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5860 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.477 seconds (JVM running for 6.35)
+890  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9360 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+893  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+895  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6033 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.663 seconds (JVM running for 6.507)
+1112 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 7004 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1173 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1174 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+7034 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.602 seconds (JVM running for 7.558)
+978  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 8468 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+980  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+980  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6072 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.696 seconds (JVM running for 6.555)
+911  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 1264 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+914  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+917  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6444 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.057 seconds (JVM running for 6.926)
+948  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9716 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+950  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+950  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6410 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.008 seconds (JVM running for 6.912)
+904  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 11472 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+906  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+907  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6578 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.17 seconds (JVM running for 7.035)

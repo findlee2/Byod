@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="slst.byod.api.srchManage.SrchManageMapper">
+    
+   <!-- GET /Byod/selectSrchWebInfoList 웹-조사업무 목록 조회(조사자용) -->
+   <select id="selectSrchWebInfoList" parameterType="SrchManageVO" resultType="SrchManageVO">
+		SELECT *
+		  FROM bd_srch_info
+		 WHERE user_id       = #{user_id}	 
+      ORDER BY report_no ASC, report_cre_dt DESC
+   </select>
+   
+   <!-- GET /Byod/SrchInfoList 조사업무 목록 조회(조사자용) -->
+   <select id="selectSrchInfoList" parameterType="SrchManageVO" resultType="SrchManageVO">
+		SELECT *
+		  FROM bd_srch_info
+		 WHERE user_id       = #{user_id}	 
+		   AND report_stats  = '1' 
+      ORDER BY report_no ASC, report_cre_dt DESC
+   </select>
+   
+   <!-- GET /Byod/SrchDetailInfo 조사업무 상세 조회(조사자용 및 관리자용) -->
+   <select id="selectSrchDetailInfo" parameterType="SrchManageVO" resultType="SrchManageVO">
+		SELECT *
+		  FROM bd_srch_info
+		 WHERE report_no = #{report_no}
+   </select>
+   
+   <!-- GET  /Byod/AdminSrchInfoList 조사업무 목록 조회(관리자용) -->
+   <select id="selectUserSrchInfoList" resultType="SrchManageVO">
+   	 	SELECT *
+		  FROM bd_srch_info
+      ORDER BY report_stats DESC, submit_dt DESC, report_cre_dt DESC, report_no DESC
+   </select>
+   
+   <!-- GET  /Byod/AdminBeforeRegistBusiness 조사업무 등록 전 보고서 번호 조회(관리자용) -->
+   <select id="selectMaxReportNo" resultType="String">
+   		SELECT max(report_no) 
+   		  FROM bd_srch_info
+   </select>
+   
+   <!-- GET /Byod/SrchFinishInfoFList 완료된 조사업무 목록 조회(조사자용) -->
+   <select id="selectSrchFinishInfoList" resultType="SrchManageVO">
+   		SELECT report_no,
+   		       business_nm
+		  FROM bd_srch_info
+		 WHERE user_id       = #{user_id}
+		   AND report_stats  = '2'	  
+      ORDER BY report_no ASC, report_cre_dt DESC
+   </select>
+   
+   <!-- GET /Byod/SrchFinishDetailInfo 완료된 조사업무 상세 조회(조사자용) -->
+   <select id="selectSrchFinishDetailInfo" resultType="SrchManageVO">
+     <choose>
+     	<when test='attch_file_cnt > 0'>
+	      	SELECT a.*,
+				   (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm,
+				   (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm
+		 	 FROM bd_srch_info a, bd_attch_file_info b
+			WHERE a.report_no = #{report_no}
+			  AND a.user_id   = b.user_id
+			  AND a.report_no = b.report_no
+			  AND report_stats = '2'
+		 GROUP BY a.report_no
+     	</when>
+     	<otherwise>
+     		SELECT *
+		 	 FROM bd_srch_info
+			WHERE report_no = #{report_no}
+			  AND report_stats = '2'
+     	</otherwise>
+     </choose>
+   </select>
+   
+   <!-- POST /Byod/AdminRegistBusiness 조사업무 등록(관리자용) -->
+   <insert id="insertRegistBusiness" parameterType="SrchManageVO">
+   		INSERT INTO bd_srch_info(
+		            report_no,
+		            user_id,
+		            business_nm,
+		            object_place_nm,
+		            object_relation_user,
+		            object_relation_user_home_tel,
+		            object_relation_user_mobil_tel,
+		            object_location,
+		            object_use,
+		            object_buil_struc,
+		            check_period_start,
+		            check_period_end,
+		            check_user_nm,
+		            check_user_qualfication_class,
+		            check_user_qualfication_no,
+		            submit_dt,
+		            head_fire_depart,
+		            location_lat,
+		            location_lon,
+		            report_cre_dt,
+		            report_stats)
+			VALUES( #{report_no},
+					#{user_id},
+					#{business_nm},
+					#{object_place_nm},
+					#{object_relation_user},
+					#{object_relation_user_home_tel},
+					#{object_relation_user_mobil_tel},
+					#{object_location},
+					#{object_use},
+					#{object_buil_struc},
+					#{check_period_start},
+					#{check_period_end},
+					#{check_user_nm},
+					#{check_user_qualfication_class},
+					#{check_user_qualfication_no},
+					#{submit_dt},
+					#{head_fire_depart},
+					#{location_lat},
+					#{location_lon},
+					NOW(),
+					default)
+   </insert>
+   
+   <!-- PUT /Byod/AdminUpdateBusiness 조사업무 수정(관리자용) -->
+   <update id="updateBusiness" parameterType="SrchManageVO">
+   		UPDATE bd_srch_info
+   			<set>
+				<if test="user_id != null">user_id = #{user_id},</if>
+				<if test="business_nm != null">business_nm = #{business_nm},</if>
+				<if test="object_place_nm != null">object_place_nm = #{object_place_nm},</if>
+				<if test="object_relation_user != null">object_relation_user = #{object_relation_user},</if>
+				<if test="object_relation_user_home_tel != null">object_relation_user_home_tel = #{object_relation_user_home_tel},</if>
+				<if test="object_relation_user_mobil_tel != null">object_relation_user_mobil_tel = #{object_relation_user_mobil_tel},</if>
+				<if test="object_location != null">object_location = #{object_location},</if>
+				<if test="object_use != null">object_use = #{object_use},</if>
+				<if test="object_buil_struc != null">object_buil_struc = #{object_buil_struc},</if>
+				<if test="check_period_start != null">check_period_start = #{check_period_start},</if>
+				<if test="check_period_end != null">check_period_end = #{check_period_end},</if>
+				<if test="check_user_nm != null">check_user_nm = #{check_user_nm},</if>
+				<if test="check_user_qualfication_class != null">check_user_qualfication_class = #{check_user_qualfication_class},</if>
+				<if test="check_user_qualfication_no != null">check_user_qualfication_no = #{check_user_qualfication_no},</if>
+				<if test="submit_dt != null">submit_dt = #{submit_dt},</if>
+				<if test="head_fire_depart != null">head_fire_depart = #{head_fire_depart},</if>
+				<if test="location_lat != null">location_lat = #{location_lat},</if>
+				<if test="location_lon != null">location_lon = #{location_lon},</if>
+				<if test="report_cre_dt != null">report_cre_dt = #{report_cre_dt},</if>
+				<if test="report_stats != null">report_stats = #{report_stats}</if>
+   			</set>
+   		 WHERE report_no = #{report_no}
+   </update>
+   
+   <!-- POST /Byod/SrchUserReportUpload 보고서(조사업무) 업로드 (조사자용) -->
+   <update id="updateReportUpload" parameterType="SrchManageVO">
+   		UPDATE bd_srch_info
+   		   	<set>
+   		   		<if test="check_extgsh_kind != null">check_extgsh_kind=#{check_extgsh_kind},</if>
+   		   		<if test="check_extgsh_result != null">check_extgsh_result=#{check_extgsh_result},</if>
+   		   		<if test="check_alarm_equip_kind != null">check_alarm_equip_kind=#{check_alarm_equip_kind},</if>
+   		   		<if test="check_alarm_equip_result != null">check_alarm_equip_result=#{check_alarm_equip_result},</if>
+   		   		<if test="check_extgsh_equip_kind != null">check_extgsh_equip_kind=#{check_extgsh_equip_kind},</if>
+   		   		<if test="check_extgsh_equip_result != null">check_extgsh_equip_result=#{check_extgsh_equip_result},</if>   		   		
+   		   		<if test="check_flee_equip_kind != null">check_flee_equip_kind=#{check_flee_equip_kind},</if>
+   		   		<if test="check_flee_equip_result != null">check_flee_equip_result=#{check_flee_equip_result},</if>
+   		   		<if test="check_etc_equip_kind != null">check_etc_equip_kind=#{check_etc_equip_kind},</if>
+   		   		<if test="check_etc_equip_result != null">check_etc_equip_result=#{check_etc_equip_result},</if>
+   		   		<if test="special_note != null">special_note=#{special_note},</if>
+   		   		submit_dt = NOW(),
+				report_stats = '2'
+   		   	</set>
+		  WHERE report_no = #{report_no}
+   </update>
+   
+   <!-- DELETE /Byod/AdminSrchInfoDelete 조사업무 삭제(공통 또는 관리자용)  -->
+   <delete id="deleteSrchInfoList" parameterType="SrchManageVO">
+		DELETE 
+    	  FROM bd_srch_info
+		 WHERE report_no  = #{report_no}
+   </delete>
+   
+</mapper>

@@ -55,7 +55,7 @@
      	<when test='attch_file_cnt > 0'>
 	      	SELECT a.*,
 				   (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='2' AND a.report_no = report_no) AS img_attch_file_nm,
-				   (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind ='1' AND a.report_no = report_no) AS audio_attch_file_nm
+				   (SELECT attch_file_nm FROM bd_attch_file_info WHERE attch_file_kind IN ('1','3') AND a.report_no = report_no) AS audio_attch_file_nm
 		 	 FROM bd_srch_info a, bd_attch_file_info b
 			WHERE a.report_no = #{report_no}
 			  AND a.user_id   = b.user_id
@@ -67,7 +67,6 @@
      		SELECT *
 		 	 FROM bd_srch_info
 			WHERE report_no = #{report_no}
-			  AND report_stats = '2'
      	</otherwise>
      </choose>
    </select>

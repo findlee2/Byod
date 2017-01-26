@@ -1,0 +1,16 @@
+1146 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 996 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1173 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1174 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6224 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.81 seconds (JVM running for 6.769)
+922  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 12516 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+926  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+926  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6238 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.849 seconds (JVM running for 6.78)
+1063 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 7504 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1065 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1065 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6570 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.108 seconds (JVM running for 7.1)
+1214 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 14088 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1231 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1232 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6746 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.276 seconds (JVM running for 7.352)

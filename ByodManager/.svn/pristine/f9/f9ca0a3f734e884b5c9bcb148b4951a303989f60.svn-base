@@ -1,0 +1,412 @@
+1087 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 8132 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1122 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1156 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+8668 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 8.262 seconds (JVM running for 9.169)
+910  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 12828 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+912  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+913  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5921 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.538 seconds (JVM running for 6.398)
+1020 [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 10484 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1027 [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1028 [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6474 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.241 seconds (JVM running for 7.024)
+36594 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+36918 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+36935 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+36937 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 0
+36938 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+36940 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+36940 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+36955 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+36961 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment ]: fail!!!!!
+243020 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+243024 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+243024 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+243125 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+243126 [http-nio-8080-exec-3] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+243127 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+243128 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+243129 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+243135 [http-nio-8080-exec-3] INFO  s.b.a.s.SrchManageController - [uploadAttachment ]: fail!!!!!
+699  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 5704 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+703  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+704  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+7339 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 7.161 seconds (JVM running for 9.328)
+30646 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+40301 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+40514 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+40577 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+47636 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+48255 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+48257 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+48409 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+134558 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment ]: fail!!!!!
+696  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 13244 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+701  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+702  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6969 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.799 seconds (JVM running for 7.53)
+20428 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+25288 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+25495 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+25549 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+26196 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+28093 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+28098 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+28270 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+131860 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [uploadAttachment ]: fail!!!!!
+167752 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+170309 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+170312 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+170357 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+172163 [http-nio-8080-exec-2] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+172171 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+172178 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+172182 [http-nio-8080-exec-2] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+201209 [http-nio-8080-exec-2] INFO  s.b.a.s.SrchManageController - [uploadAttachment ]: fail!!!!!
+256910 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+264693 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+264696 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+264753 [http-nio-8080-exec-3] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+265204 [http-nio-8080-exec-3] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+265765 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+265769 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+265773 [http-nio-8080-exec-3] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+780  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 10268 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+815  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+815  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+8827 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 8.621 seconds (JVM running for 9.436)
+22030 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/Byod/srchUserReportUpload
+27223 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==>  Preparing: UPDATE bd_srch_info SET submit_dt = NOW(), report_stats = '2' WHERE report_no = ? 
+27445 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - ==> Parameters: SL_ResultReport_000002(String)
+27481 [http-nio-8080-exec-1] DEBUG s.b.a.s.S.updateReportUpload - <==    Updates: 1
+28853 [http-nio-8080-exec-1] INFO  s.b.a.s.SrchManageController - [updateReportUpload method - update]: success!!
+29284 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==>  Preparing: SELECT count(*) FROM bd_attch_file_info WHERE report_no = ? 
+29286 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - ==> Parameters: SL_ResultReport_000002(String)
+29438 [http-nio-8080-exec-1] DEBUG s.b.a.a.A.selectReportAndFileCnt - <==      Total: 1
+907  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 12740 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+908  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+909  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6650 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.273 seconds (JVM running for 7.116)
+1035 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 7768 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+1037 [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+1037 [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6881 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.43 seconds (JVM running for 7.37)
+908  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9392 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+910  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+911  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5800 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.422 seconds (JVM running for 6.263)
+950  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 5588 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+952  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+953  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6260 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.887 seconds (JVM running for 6.74)
+900  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 11612 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+901  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+902  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6213 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.831 seconds (JVM running for 6.646)
+941  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 12028 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+943  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+944  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5903 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.509 seconds (JVM running for 6.919)
+894  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 11876 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+896  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+897  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6787 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.4 seconds (JVM running for 7.262)
+895  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9320 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+898  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+899  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5966 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.59 seconds (JVM running for 6.441)
+901  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 12424 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+902  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+903  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6037 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.662 seconds (JVM running for 6.509)
+919  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 11644 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+921  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+921  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5988 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.606 seconds (JVM running for 6.442)
+901  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 3396 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+903  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+903  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5871 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.506 seconds (JVM running for 6.342)
+876  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 4484 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+878  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+880  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5608 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.236 seconds (JVM running for 6.071)
+889  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9496 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+892  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+894  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6031 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.654 seconds (JVM running for 6.511)
+885  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9164 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+886  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+887  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5775 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.399 seconds (JVM running for 6.23)
+929  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 10520 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+932  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+934  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6020 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.634 seconds (JVM running for 6.497)
+944  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 11156 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+948  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+948  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6706 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.318 seconds (JVM running for 7.201)
+914  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 12216 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+916  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+917  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6470 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.068 seconds (JVM running for 6.949)
+898  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 12344 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+900  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+901  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6422 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.036 seconds (JVM running for 6.885)
+967  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 6052 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+969  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+970  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6633 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 6.192 seconds (JVM running for 7.197)
+879  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 5776 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+881  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+882  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+6080 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.698 seconds (JVM running for 6.563)
+614  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 8472 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+618  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+618  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5447 [main] ERROR o.a.coyote.http11.Http11NioProtocol - Failed to start end point associated with ProtocolHandler [http-nio-10.0.6.122-8007]
+java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:21)
+5449 [main] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-8007]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8007]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:21)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:976)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	... 14 common frames omitted
+5566 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8007 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8007, or configure this application to listen on another port.
+
+581  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 10524 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+586  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+586  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6083 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.937 seconds (JVM running for 6.564)
+12186 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+12222 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+12263 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+12268 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+12586 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+12586 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+25703 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+55905 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+230570 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+235318 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+236852 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+238927 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+243841 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+245134 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+303387 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+304356 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+305014 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+369216 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+373152 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+374093 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+539846 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+540791 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+541503 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+543576 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+544293 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+544919 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+545736 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+697116 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+921781 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+922688 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+923357 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+924114 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+984342 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+987940 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1025297 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1036718 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1038245 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1039184 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1376406 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1378768 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1379768 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1380944 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+602  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 11508 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+606  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+607  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5781 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.63 seconds (JVM running for 6.268)
+9116 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+9772 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+10835 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+10920 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+11635 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+11704 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+12428 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+12494 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+13146 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+13213 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+156554 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+156638 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+158105 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+158181 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+158898 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+158967 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+159671 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+159740 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+160362 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+160440 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+161090 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+161172 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+161761 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+161831 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+162633 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+162728 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+163452 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+163520 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+175665 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+175772 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+179494 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+179523 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+180339 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+180371 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+180919 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+180949 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+292170 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+292526 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+293597 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+293669 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+294303 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+294361 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+294927 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+294995 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+295551 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+295613 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+315108 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+315365 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+316151 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+316229 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+316834 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+316902 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+317920 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+317992 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+318647 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+318718 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+320535 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+320616 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+321287 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+321362 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+747546 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+752160 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+753478 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+754255 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+754928 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+755604 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+756284 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+759310 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+760175 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+760869 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+761472 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+761978 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+762492 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+762968 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+763458 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+763935 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+764360 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+947768 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1184620 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1185762 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1186446 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1187089 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1187765 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1188329 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1188863 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1206006 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1206840 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1207441 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1207995 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1208545 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1208976 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1209474 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1278931 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1279883 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1280514 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1281094 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1281671 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1282301 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1282900 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1283424 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+1287555 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2035920 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2037054 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2037703 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2038297 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2038867 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2039419 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2039911 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2301452 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2302423 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2303122 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2303735 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2307355 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2319251 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2566411 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2568100 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2568978 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2569628 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2570328 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2570882 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2572497 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2635310 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2637830 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest
+2660154 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/test/ajaxTest

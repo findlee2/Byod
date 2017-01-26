@@ -1,0 +1,763 @@
+633  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 7752 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+656  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+657  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5839 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.684 seconds (JVM running for 6.371)
+8998 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+9013 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+16944 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+16948 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+18443 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+18535 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+18542 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+18555 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+18872 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+18889 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+23594 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminAllLogSrchInfoList
+23958 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectAdminAllLogSrchInfoList - ==>  Preparing: SELECT log_id, byod.FN_COM_CODE_CONVERT_NAME('COM001', log_gb) AS log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id FROM bd_log_info ORDER BY log_id DESC 
+23977 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectAdminAllLogSrchInfoList - ==> Parameters: 
+24095 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION byod.FN_COM_CODE_CONVERT_NAME does not exist
+### The error may exist in file [C:\Users\ig\git\ByodGit\Byod\ByodManager\bin\mybatis\mapper\logManageMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT log_id,       byod.FN_COM_CODE_CONVERT_NAME('COM001', log_gb) AS log_gb,       report_no,       business_nm,       user_id,       user_nm,       dispose_tm,       report_upload_tm,       report_status,       network_path,       access_loctn,       dispose_user_nm,       dispose_user_id     FROM bd_log_info    ORDER BY log_id DESC
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION byod.FN_COM_CODE_CONVERT_NAME does not exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION byod.FN_COM_CODE_CONVERT_NAME does not exist] with root cause
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION byod.FN_COM_CODE_CONVERT_NAME does not exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy111.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	at com.sun.proxy.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:128)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy81.selectAdminAllLogSrchInfoList(Unknown Source)
+	at slst.byod.api.logManage.LogManageController.adminAllLogSrchInfoList(LogManageController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+24097 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+599  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 10824 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+603  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+604  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5668 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.519 seconds (JVM running for 6.214)
+7203 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/swagger-resources
+7271 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/v2/api-docs
+7574 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/ui
+7574 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/configuration/security
+9548 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminAllLogSrchInfoList
+9860 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectAdminAllLogSrchInfoList - ==>  Preparing: SELECT log_id, `byod.FN_COM_CODE_CONVERT_NAME`('COM001', log_gb) AS log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id FROM bd_log_info ORDER BY log_id DESC 
+9877 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectAdminAllLogSrchInfoList - ==> Parameters: 
+9911 [http-nio-8080-exec-6] DEBUG s.b.a.l.L.selectAdminAllLogSrchInfoList - <==      Total: 171
+463056 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+463092 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+463093 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+463094 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+463095 [http-nio-8080-exec-3] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+463096 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+463097 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+463146 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+463147 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000171
+463147 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000172
+463148 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+463149 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000172(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+463204 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+463205 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+463240 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+464031 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+464276 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+464294 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+464294 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+464302 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+467117 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+467118 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+467119 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 10(Integer)
+467125 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+467872 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+467873 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+467874 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 20(Integer)
+467875 [http-nio-8080-exec-8] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 1
+470384 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+470388 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+470389 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+470392 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+579  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 2144 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+583  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+584  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5348 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.203 seconds (JVM running for 5.839)
+12892 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+12915 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+16034 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+16327 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+16343 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+16350 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+16352 [http-nio-8080-exec-2] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+16354 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+16354 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+16357 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+16357 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000172
+16357 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000173
+16358 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+16359 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000173(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+16416 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+16417 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+16452 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+16714 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+142480 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+142654 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+145084 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+145092 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+146998 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+147015 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+152358 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+152360 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+152412 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+152414 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+154736 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+154738 [http-nio-8080-exec-1] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+154739 [http-nio-8080-exec-1] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+154741 [http-nio-8080-exec-1] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+154741 [http-nio-8080-exec-1] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+154741 [http-nio-8080-exec-1] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+154742 [http-nio-8080-exec-1] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+154743 [http-nio-8080-exec-1] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+154744 [http-nio-8080-exec-1] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000173
+154744 [http-nio-8080-exec-1] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000174
+154744 [http-nio-8080-exec-1] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+154745 [http-nio-8080-exec-1] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000174(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+154776 [http-nio-8080-exec-1] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+154777 [http-nio-8080-exec-1] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+154785 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+154793 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+328124 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+328134 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+328176 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+328177 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+330712 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+330714 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+330714 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+330716 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+330716 [http-nio-8080-exec-2] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+330716 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+330717 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+330718 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+330718 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000174
+330718 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000175
+330719 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+330720 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000175(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+330801 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+330801 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+330809 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+330986 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+347763 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+347771 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+347826 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+347828 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+350436 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+350438 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+350439 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+350440 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+350440 [http-nio-8080-exec-4] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+350440 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+350441 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+350442 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+350442 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000175
+350442 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000176
+350443 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+350443 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000176(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+350480 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+350480 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+350572 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+350737 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+590  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 1304 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+594  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+594  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5392 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.237 seconds (JVM running for 5.886)
+8704 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8710 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8729 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+8729 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+11949 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+12223 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+12239 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+12247 [http-nio-8080-exec-3] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+12249 [http-nio-8080-exec-3] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+12250 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+12251 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+12254 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+12254 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000176
+12255 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000177
+12255 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+12256 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000177(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+12294 [http-nio-8080-exec-3] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+12295 [http-nio-8080-exec-3] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+12328 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+12603 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+7293802 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+7293986 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+7419447 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+7419455 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+7419521 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+7419523 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+7422407 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+7422409 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+7422411 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+7422415 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+7422416 [http-nio-8080-exec-4] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+7422417 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+7422418 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+7422420 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+7422421 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000177
+7422421 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000178
+7422422 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+7422424 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000178(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+7422470 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+7422470 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+7422481 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+7422675 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+930  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 12756 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+932  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+933  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5673 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.297 seconds (JVM running for 6.14)
+582  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 8668 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+585  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+586  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5243 [main] ERROR o.a.coyote.http11.Http11NioProtocol - Failed to start end point associated with ProtocolHandler [http-nio-10.0.6.122-8007]
+java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:21)
+5245 [main] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-8007]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8007]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at slst.byod.ByodManagerApplication.main(ByodManagerApplication.java:21)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:976)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	... 14 common frames omitted
+5305 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8007 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8007, or configure this application to listen on another port.
+
+578  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 6780 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+582  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+583  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5181 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.035 seconds (JVM running for 5.688)
+24734 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+24747 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Could not resolve view with name 'forward:/login' in servlet with name 'dispatcherServlet'] with root cause
+javax.servlet.ServletException: Could not resolve view with name 'forward:/login' in servlet with name 'dispatcherServlet'
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1237)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+24760 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+599  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 12468 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+602  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+602  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5541 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.392 seconds (JVM running for 6.026)
+15839 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+15856 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+21074 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+21371 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+21388 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+21397 [http-nio-8080-exec-2] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+21398 [http-nio-8080-exec-2] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+21401 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+21401 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+21404 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+21405 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000178
+21405 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000179
+21406 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+21407 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000179(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+21472 [http-nio-8080-exec-2] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+21473 [http-nio-8080-exec-2] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+21541 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+21842 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+582750 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+582760 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5197462 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+5197491 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5197574 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchInfoList
+5197605 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+5201548 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+5201556 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5201597 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchInfoList
+5201599 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+5203490 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+5203493 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5203536 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchInfoList
+5203538 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+5215911 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+5215919 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5216020 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchInfoList
+5216022 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+5217565 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+5217568 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5217667 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchInfoList
+5217668 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+5218757 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+5218761 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5218871 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchInfoList
+5218873 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+5220014 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+5220020 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5220103 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchInfoList
+5220105 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+5221282 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+5221286 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+5221382 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/srchInfoList
+5221385 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+989  [Test worker] INFO  s.byod.ByodManagerApplicationTests - Starting ByodManagerApplicationTests on ig-PC with PID 9628 (started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+990  [Test worker] DEBUG s.byod.ByodManagerApplicationTests - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+991  [Test worker] INFO  s.byod.ByodManagerApplicationTests - No active profile set, falling back to default profiles: default
+5866 [Test worker] INFO  s.byod.ByodManagerApplicationTests - Started ByodManagerApplicationTests in 5.492 seconds (JVM running for 6.332)
+596  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 14292 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+600  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+600  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+6187 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 6.035 seconds (JVM running for 6.684)
+19499 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+19518 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+43311 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+43629 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+43648 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+43657 [http-nio-8080-exec-5] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+43659 [http-nio-8080-exec-5] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+43661 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+43661 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+43664 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+43665 [http-nio-8080-exec-5] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000179
+43665 [http-nio-8080-exec-5] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000180
+43666 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+43667 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000180(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+43728 [http-nio-8080-exec-5] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+43728 [http-nio-8080-exec-5] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+43803 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+44135 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+1081810 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchDetailInfo
+1081815 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==>  Preparing: SELECT * FROM bd_srch_info WHERE report_no = ? 
+1081816 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==> Parameters: SL_ResultReport_000001(String)
+1081819 [http-nio-8080-exec-9] DEBUG s.b.a.s.S.selectSrchDetailInfo - <==      Total: 1
+609  [main] INFO  slst.byod.ByodManagerApplication - Starting ByodManagerApplication on ig-PC with PID 10296 (C:\Users\ig\git\ByodGit\Byod\ByodManager\bin started by ig in C:\Users\ig\git\ByodGit\Byod\ByodManager)
+613  [main] DEBUG slst.byod.ByodManagerApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE
+613  [main] INFO  slst.byod.ByodManagerApplication - No active profile set, falling back to default profiles: default
+5702 [main] INFO  slst.byod.ByodManagerApplication - Started ByodManagerApplication in 5.528 seconds (JVM running for 6.679)
+8583 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+8601 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+9320 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/
+9322 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/login
+12548 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/userWLoginInfo
+12829 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==>  Preparing: SELECT * FROM bd_user_info WHERE user_id = ? AND user_pw = ? 
+12846 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - ==> Parameters: admin(String), a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=(String)
+12855 [http-nio-8080-exec-4] DEBUG s.b.a.u.U.selectUserInfo - <==      Total: 1
+12856 [http-nio-8080-exec-4] INFO  s.b.a.u.UserManageController - [ByodApiUtil.isEmpty(responseBody)]: false
+12858 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==>  Preparing: SELECT max(log_id) FROM bd_log_info 
+12858 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - ==> Parameters: 
+12861 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.selectMaxLogId - <==      Total: 1
+12861 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - tmpResult]: SYSLOG_0000000180
+12861 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminBeforeRegistBusinessNoSrch method - responseBody]: SYSLOG_0000000181
+12862 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==>  Preparing: INSERT INTO bd_log_info( log_id, log_gb, report_no, business_nm, user_id, user_nm, dispose_tm, report_upload_tm, report_status, network_path, access_loctn, dispose_user_nm, dispose_user_id) VALUES( ?, ?, ?, ?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?) 
+12863 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - ==> Parameters: SYSLOG_0000000181(String), 1(String), null, null, null, null, null, null, null, null, rckR1pQkUnCj/oYHgpYVrQ==(String), admin(String)
+12899 [http-nio-8080-exec-4] DEBUG s.b.a.l.L.insertRegistBusinessLog - <==    Updates: 1
+12899 [http-nio-8080-exec-4] INFO  s.b.a.l.LogManageUtilParsingController - [adminInsertRegistBusinessLog method - rtnCnt]: 1
+12933 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchInfoList
+13243 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+55260 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+55471 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+55572 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+55594 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+55597 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+55605 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+59824 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchDetailInfo
+59991 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchDetailInfo.jsp
+60091 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchDetailInfo
+60093 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==>  Preparing: SELECT * FROM bd_srch_info WHERE report_no = ? 
+60093 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==> Parameters: (String)
+60094 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectSrchDetailInfo - <==      Total: 0
+60102 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at slst.byod.api.srchManage.SrchManageController.adminSrchDetailInfo(SrchManageController.java:195)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+60110 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+157720 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+157890 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+158067 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+158069 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+158070 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+158078 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+161172 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchDetailInfo
+161187 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchDetailInfo.jsp
+161270 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchDetailInfo
+161272 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==>  Preparing: SELECT * FROM bd_srch_info WHERE report_no = ? 
+161273 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==> Parameters: (String)
+161273 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchDetailInfo - <==      Total: 0
+161274 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at slst.byod.api.srchManage.SrchManageController.adminSrchDetailInfo(SrchManageController.java:195)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+161280 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+239982 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+239992 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+240095 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+240098 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+240099 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+240103 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+242322 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchDetailInfo
+242481 [http-nio-8080-exec-9] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchDetailInfo.jsp
+245521 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchDetailInfo
+245523 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==>  Preparing: SELECT * FROM bd_srch_info WHERE report_no = ? 
+245523 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==> Parameters: (String)
+245525 [http-nio-8080-exec-10] DEBUG s.b.a.s.S.selectSrchDetailInfo - <==      Total: 0
+245526 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at slst.byod.api.srchManage.SrchManageController.adminSrchDetailInfo(SrchManageController.java:195)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+245533 [http-nio-8080-exec-10] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/error
+301424 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+301564 [http-nio-8080-exec-1] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+301668 [http-nio-8080-exec-2] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+301671 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+301672 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+301675 [http-nio-8080-exec-2] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+302457 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/srchInfo/srchInfoList
+302459 [http-nio-8080-exec-3] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/WEB-INF/view/jsp/srchInfo/srchInfoList.jsp
+302541 [http-nio-8080-exec-4] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchInfoList
+302543 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==>  Preparing: SELECT *, (SELECT count(*) FROM bd_srch_info) AS TOT_CNT FROM bd_srch_info ORDER BY report_no ASC, report_stats DESC, submit_dt DESC, report_cre_dt DESC LIMIT 10 OFFSET ? 
+302543 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - ==> Parameters: 0(Integer)
+302546 [http-nio-8080-exec-4] DEBUG s.b.a.s.S.selectUserSrchInfoList - <==      Total: 10
+303688 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchDetailInfo
+303694 [http-nio-8080-exec-5] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchDetailInfo.jsp
+304623 [http-nio-8080-exec-6] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchDetailInfo
+304625 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==>  Preparing: SELECT * FROM bd_srch_info WHERE report_no = ? 
+304625 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==> Parameters: SL_ResultReport_000001(String)
+304627 [http-nio-8080-exec-6] DEBUG s.b.a.s.S.selectSrchDetailInfo - <==      Total: 1
+321654 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/srchInfo/srchDetailInfo
+321791 [http-nio-8080-exec-8] INFO  s.b.a.c.c.i.RequestInterceptor - [POST]/WEB-INF/view/jsp/srchInfo/srchDetailInfo.jsp
+322643 [http-nio-8080-exec-7] INFO  s.b.a.c.c.i.RequestInterceptor - [GET]/Byod/adminSrchDetailInfo
+322645 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==>  Preparing: SELECT * FROM bd_srch_info WHERE report_no = ? 
+322646 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchDetailInfo - ==> Parameters: SL_ResultReport_000001(String)
+322648 [http-nio-8080-exec-7] DEBUG s.b.a.s.S.selectSrchDetailInfo - <==      Total: 1

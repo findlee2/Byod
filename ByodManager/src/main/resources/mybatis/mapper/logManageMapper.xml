@@ -8,7 +8,7 @@
    		  FROM bd_log_info
    </select>
    
-   <!-- GET /Byod/AdminAllLogSrchInfoList 로그 관리-조회(관리자용) -->
+   <!-- GET /Byod/AdminAllLogSrchInfoList 로그 관리 리스트조회(관리자용) -->
    <select id="selectAdminAllLogSrchInfoList" resultType="LogManageVO">
    		SELECT log_id,
 			   `byod.FN_COM_CODE_CONVERT_NAME`('COM001', log_gb) AS log_gb,
@@ -22,9 +22,57 @@
 			   network_path,
 			   access_loctn,
 			   dispose_user_nm,
-			   dispose_user_id
+			   dispose_user_id,
+			   location_lat,
+			   location_lon
 		  FROM bd_log_info
 	  ORDER BY log_id DESC		
+   </select>
+   
+   <!-- GET /Byod/selectAdminAllLogMapViewList 로그 관리 맵뷰조회(관리자용) -->
+   <select id="selectAdminAllLogMapViewList" resultType="LogManageVO">
+   		SELECT log_id,
+			   `byod.FN_COM_CODE_CONVERT_NAME`('COM001', log_gb) AS log_gb,
+			   report_no,
+			   business_nm,
+			   user_id,
+			   user_nm,
+			   dispose_tm,
+			   report_upload_tm,
+			   report_status,
+			   network_path,
+			   access_loctn,
+			   dispose_user_nm,
+			   dispose_user_id,
+			   location_lat,
+			   location_lon
+		  FROM bd_log_info
+		 WHERE log_gb in ('1','2') 
+	  ORDER BY log_id DESC		
+   </select>
+   
+   <!-- GET /Byod/selectAdminWeekLogSrchInfoList 로그 관리 리스트조회(관리자용) -->
+   <select id="selectAdminWeekLogSrchInfoList" resultType="LogManageVO">
+   <![CDATA[
+   		SELECT log_id,
+			   `byod.FN_COM_CODE_CONVERT_NAME`('COM001', log_gb) AS log_gb,
+			   report_no,
+			   business_nm,
+			   user_id,
+			   user_nm,
+			   dispose_tm,
+			   report_upload_tm,
+			   report_status,
+			   network_path,
+			   access_loctn,
+			   dispose_user_nm,
+			   dispose_user_id,
+			   location_lat,
+			   location_lon
+		  FROM bd_log_info		  
+		 WHERE date(dispose_tm) >= date(subdate(#{value}, INTERVAL 7 DAY)) and date(dispose_tm) <= date(#{value})
+	  ORDER BY log_id DESC
+    ]]>		
    </select>
    
    <!-- 조사업무 등록 로그 생성(관리자용) -->
@@ -42,7 +90,9 @@
 					network_path,
 					access_loctn,
 					dispose_user_nm,
-					dispose_user_id)
+					dispose_user_id,
+					location_lat,
+					location_lon)
 			VALUES( #{log_id},
 					#{log_gb},
 					#{report_no},
@@ -55,7 +105,9 @@
 					#{network_path},
 					#{access_loctn},
 					#{dispose_user_nm},
-					#{dispose_user_id})	
+					#{dispose_user_id},
+					#{location_lat},
+					#{location_lon})	
    </insert>
    
 </mapper>
